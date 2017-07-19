@@ -6,6 +6,6 @@ title="Z" />
 <br>
 $\phi_{s}$
 <br>
-$$begin{pmatrix}1 & 0 & \cdots & 0 \end{pmatrix}$$
+$$\begin{pmatrix}1 & 0 & \cdots & 0 \end{pmatrix}$$
 <br>
 $\phi_{s}$
