@@ -9,5 +9,5 @@
 
 ## State space forms
 
-* ARMA model
+* [ARMA model](Ssf/ARMA_SSF.md)
 * ARIMA model
