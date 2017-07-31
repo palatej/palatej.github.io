@@ -1,5 +1,9 @@
 # Statistical documentation for JDemetra+ 3.0
 
+## Likelihood of gaussian model
+
+* [Likelihood function](Likelihood/ll.md)
+
 ## ARMA estimation
 
 * Kalman filter
