@@ -73,11 +73,11 @@ Those representations of the concentrated likelihood are defined in the interfac
 | Elements of the likelihood (see formulae) | Methods |
 | --- | ---- |
 | $ n $ |  dim() |
-| e'e |  ssq() |
-| e   |  e() |
-|   |  logDeterminant() |
+| $ e'e $ |  ssq() |
+| $ e $  |  e() |
+| $ \log \Omega $  |  logDeterminant() |
 | $ v $  | v() |
-|   | factor() |
+| $ \Omega^{frac{1}{n}} $  | factor() |
  
 
 ## Remarks 
