@@ -55,7 +55,7 @@ $$ y=X\beta + \mu \quad \mu \sim N\left(0, \sigma^2\Omega\right) $$
 The log-likelihood is then
 $$ l \left(\theta,\beta , \sigma | y \right ) = - \frac{1}{2} \left(n \log{2 \pi}+ n \log {\sigma^2} + \log{|\Omega |} + \frac{1}{\sigma ^2} \left(y-X\beta \right)'\Omega^{-1}\left(y-X\beta \right) \right) $$
 
-The maximum likelihood estimator of β is
+The maximum likelihood estimator of $\beta$ is
 
 $$ \hat{\beta} = \left( X'\Omega^{-1}X\right)^{-1}X'\Omega^{-1}y $$
 
