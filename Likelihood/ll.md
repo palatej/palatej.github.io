@@ -75,9 +75,9 @@ Those representations of the concentrated likelihood are defined in the interfac
 | $n$   |  dim() |
 | $e'e$ |  ssq() |
 | $e$   |  e() |
-| $\log{\|\Omega\|$ |  logDeterminant() |
+| $\log \| \Omega \|$ |  logDeterminant() |
 | $v$  | v() |
-| $\|\Omega\|^{1⁄n}$ | factor() |
+| $\| \Omega \|^{1⁄n}$ | factor() |
  
 
 ## Remarks 
