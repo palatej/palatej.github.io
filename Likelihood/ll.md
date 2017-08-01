@@ -1,3 +1,4 @@
+
 # Likelihood of gaussian models 
 
 ## Likelihood of a multivariate normal distribution 
