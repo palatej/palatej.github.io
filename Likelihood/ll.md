@@ -1,6 +1,7 @@
-﻿# Likelihood of gaussian models 
+# Likelihood of gaussian models 
 
 ## Likelihood of a multivariate normal distribution 
+
 
 The pdf of a multivariate normal distribution is:
 
@@ -77,7 +78,9 @@ Those representations of the concentrated likelihood are defined in the interfac
 | v  | v() |
 | \|Ω\|^(1⁄n) | factor() |
  
+
 ## Remarks 
+
 
 ### Missing values 
 
