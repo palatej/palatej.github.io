@@ -69,16 +69,14 @@ $$ e=L^{-1} \left(y-X\hat\beta \right) $$
 
 Those representations of the concentrated likelihood are defined in the interfaces ___demetra.likelihood.ILikelihood___ and ___demetra.likelihood___
 
+#### Correspondance between the elements of the likelihood (see formulae) and the methods of the classes
 
-| Elements of the likelihood (see formulae) | Methods |
-| --- | ---- |
-| $$ n $$ |  dim() |
-| $$ e'e $$ |  ssq() |
-| $$ e $$  |  e() |
-| $$ \log \Omega $$  |  logDeterminant() |
-| $$ v $$  | v() |
-| $$ \Omega^{\frac{1}{n}} $$  | factor() |
- 
+* $n$ : dim()
+* $e'e$ : ssq()
+* $e$ : e()
+* $\log \|\Omega\|$ : logDeterminant()
+* $v$ : v()
+* $\|\Omega\|^{frac{1}{n}}$ : factor() 
 
 ## Remarks 
 
