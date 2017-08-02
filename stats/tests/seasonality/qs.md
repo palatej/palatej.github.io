@@ -1,0 +1,2 @@
+# QS Test for seasonality
+

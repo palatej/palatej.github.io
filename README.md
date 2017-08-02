@@ -21,5 +21,5 @@
 
 ### Specific models
 
-* [ARMA model](Ssf/arma_ssf.md)
-* ARIMA model
+* [ARMA model](Ssf/implementations/arma_ssf.md)
+* [ARIMA model](Ssf/implementations/arima_ssf.md)
