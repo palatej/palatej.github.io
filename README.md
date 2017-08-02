@@ -2,7 +2,7 @@
 
 ## Likelihood evaluation
 
-* [Likelihood of gaussian models](Likelihood/ll.md)
+* [Likelihood of gaussian models](likelihood/ll.md)
 
 ## ARIMA models
 
@@ -15,11 +15,18 @@
 * Ljung-Box algorithm
 * X12 algorithm
 
+## Statistics
+
+* [White noise tests](./tests/wn/overview.md)
+* [Seasonality tests](./tests/seasonality/overview.md)
+
+## Time series
+
 ## State space forms
 
 ### General description
 
 ### Specific models
 
-* [ARMA model](Ssf/implementations/arma_ssf.md)
-* [ARIMA model](Ssf/implementations/arima_ssf.md)
+* [ARMA model](ssf/implementations/arma_ssf.md)
+* [ARIMA model](ssf/implementations/arima_ssf.md)
