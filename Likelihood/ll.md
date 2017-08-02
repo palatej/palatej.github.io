@@ -76,7 +76,7 @@ Those representations of the concentrated likelihood are defined in the interfac
 * $e$ : e()
 * $\log \|\Omega\|$ : logDeterminant()
 * $v$ : v()
-* $\|\Omega\|^{frac{1}{n}}$ : factor() 
+* $\|\Omega\|^{\frac{1}{n}}$ : factor() 
 
 ## Remarks 
 

@@ -23,10 +23,14 @@ $$ R\left( x \right) Q\left( x \right) \quad and \quad P\left( x \right) $$
 we get
 
 $$ r_0 = \frac{p_0} {q_0} $$
+<br>
 $$ r_1 = \frac{ p_1 - r_0 q_1} { q_0 } $$
+<br>
 $$ \cdots $$
+<br>
 $$ r_k=\frac{p_k-\sum_{i=1}^{k} {r_{k-i} q_i}}{q_0} \quad,\:k\le n $$
 
+<br>
 $$ r_k=\frac{p_k-\sum_{i=1}^{n} {r_{k-i} q_i}}{q_0} \quad,\:k\gt n $$
 
 Rational functions of polynomials with real coefficients are implemented in the class ___demetra.maths.polynomials.RationalFunction___
