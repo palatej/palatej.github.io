@@ -1,10 +1,14 @@
 # Statistical documentation for JDemetra+ 3.0
 
-## Likelihood of gaussian model
+## Likelihood evaluation
 
-* [Likelihood function](Likelihood/ll.md)
+* [Likelihood of gaussian models](Likelihood/ll.md)
 
-## ARMA estimation
+## ARIMA models
+
+* [Description](arima/arima.md)
+
+### Estimation
 
 * Kalman filter
 * Ansley algorithm
@@ -12,6 +16,10 @@
 * X12 algorithm
 
 ## State space forms
+
+### General description
+
+### Specific models
 
 * [ARMA model](Ssf/arma_ssf.md)
 * ARIMA model

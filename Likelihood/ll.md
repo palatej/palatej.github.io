@@ -67,7 +67,7 @@ $$ e=L^{-1} \left(y-X\hat\beta \right) $$
 
 ## Implementation
 
-Those representations of the concentrated likelihood are defined in the interfaces ___demetra.likelihood.ILikelihood___ and ___demetra.likelihood___
+Those representations of the concentrated likelihood are defined in the interfaces ___demetra.likelihood.ILikelihood___ and ___demetra.likelihood.IConcentratedLikelihood___
 
 #### Correspondance between the elements of the likelihood (see formulae) and the methods of the classes
 
