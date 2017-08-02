@@ -16,9 +16,9 @@ The autocovariance generating function can be factorized as
 
 $$ \frac{\Gamma\left(F\right)}{\Phi\left(F\right)} + \frac{\Gamma\left(B\right)}{\Phi\left(B\right)} $$  
 <br>
-That is achieved by solving the linear system
+That is achieved by solving the linear system  
 $$ \Gamma\left(F\right)\Phi\left(B\right) + \Gamma\left(B\right)\Phi\left(F\right) = \Theta\left(F\right)\Theta\left(B\right)$$  
 <br>
 See [Decomposition of symmetric Filters](../filters/symmetric.md) for a solution of that equation  
 
-That method is implemented in  _defaultSymmetricComputer_ of the class ___demetra.arima.internal.AutoCovarianceComputerts___
+That method is implemented in  _defaultSymmetricComputer_ of the class ___demetra.arima.internal.AutoCovarianceComputers___
