@@ -17,8 +17,8 @@
 
 ## Statistics
 
-* [White noise tests](./tests/wn/overview.md)
-* [Seasonality tests](./tests/seasonality/overview.md)
+* [White noise tests](stats/tests/wn/overview.md)
+* [Seasonality tests](stats/tests/seasonality/overview.md)
 
 ## Time series
 
