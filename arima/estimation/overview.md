@@ -1,6 +1,6 @@
 # Estimation of ARMA models
 
-The computation of [exact likelihood](../../stats/lkelihood/ll.md) requires the evaluation of two main quantities: the determinant of the covariance matrix and the sum of the squared residuals.
+The computation of [exact likelihood](../../stats/likelihood/ll.md) requires the evaluation of two main quantities: the determinant of the covariance matrix and the sum of the squared residuals.
 The different algorithms for the computation of the likelihood of ARMA models provides efficient solutions for those two problems.
 The quantity
 $$ y' \Omega^-1 y $$ 
