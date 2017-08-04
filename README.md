@@ -1,24 +1,24 @@
 # Statistical documentation for JDemetra+ 3.0
 
 
-* ARIMA models
+## ARIMA models
 
-  *  [Description](arima/arima.md)
-  *  [Estimation](arima/estimation/overview.md)
+* [Description](arima/arima.md)
 
-* Statistics
+### [Estimation](arima/estimation/overview.md)
 
-  * Tests
-    * [White noise tests](./stats/tests/wn/overview.md)
-    * [Seasonality tests](./stats/tests/seasonality/overview.md)
+## Statistics
 
-  * Likelihood evaluation
-    * [Likelihood of gaussian models](./likelihood/ll.md)
+### Tests
 
-* Time series
+* [White noise tests](./tests/wn/overview.md)
+* [Seasonality tests](./tests/seasonality/overview.md)
 
-* State space forms
-  * General description
-  * Specific models
-    * [ARMA model](ssf/implementations/arma_ssf.md)
-    * [ARIMA model](ssf/implementations/arima_ssf.md)
+### Likelihood evaluation
+
+* [Likelihood of gaussian models](./likelihood/ll.md)
+
+## Time series
+
+## [State space forms](./ssf/overview.md)
+
