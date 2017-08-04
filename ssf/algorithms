@@ -1,8 +1,0 @@
-## Main algorithms
-
-The following notations are used: 
-
-$$ \tilde{a_t}= $$
-(a_t ) ̃=E(α_t |y_0⋯y_n )
-(P_t ) ̃=var(α_t |y_0⋯y_n )
-(e_t ) ̃=E(ε_t |y_0⋯y_n )
