@@ -9,6 +9,11 @@ Object-oriented programming can provide, through its polymorphic mechanism, a go
 * [General form](./model.md)
 * Algorithms  
   * [Main algorithms](./algorithms.md)
+* Implementations
+  * [ARMA](./implementations/arma_ssf.md)
+  * [ARIMA](./implementations/arima_ssf.md)
+  * Benchmarking
+    * [Cholette] 
 
 
 ### Bibliography

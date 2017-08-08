@@ -27,6 +27,10 @@ $$ A_{-1}A_{-1}'=P_\infty $$
 models the diffuse part.   
 The model used in JD+ is quasi-identical to the model discussed in [1].
 
+So, the model is defined by the following quantities (possible default values are indicated in bracketsà:
+
+$$ Z_t, H_t [=0], T_t, V_t, S_t [=Cholesky(V)], a_{-1}[=0] A_{-1} [=0], P_* $$
+
 #### Bibliography
 
 [1] _DURBIN J. AND KOOPMAN S.J._ (2012): "Time Series Analysis by State Space Methods", second edition. Oxford University Press.
