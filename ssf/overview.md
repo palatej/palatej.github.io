@@ -7,13 +7,21 @@ Object-oriented programming can provide, through its polymorphic mechanism, a go
 ### Contents
 
 * [General form](./model.md)
-* Algorithms  
-  * [Main algorithms](./algorithms.md)
+* Algorithms 
+  * Filtering 
+    * [Ordninary filter](./algorithms/ordinaryfilter.md) 
+    * [Array filter](./algorithms/arrayfilter.md) 
+    * [Fast filter](./algorithms/ckmsfilter.md)
+  * Smoothing
+    * [Ordinary smoother](./algorithms/ordinarysmoother.md) 
+    * [Disturbance smoother](./algorithms/disturbance.md) 
+    * [Fixed point smoother](./algorithms/fixedpoint.md) 
+  
 * Implementations
   * [ARMA](./implementations/arma_ssf.md)
   * [ARIMA](./implementations/arima_ssf.md)
   * Benchmarking
-    * [Cholette] 
+    * [Cholette](./implementations/cholette_ssf.md) 
 
 
 ### Bibliography
