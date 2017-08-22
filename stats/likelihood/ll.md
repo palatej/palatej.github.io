@@ -39,7 +39,7 @@ or
 
 $$ l_c \left( \theta | y \right ) = - \frac{n}{2} \left(\log{2 \pi}+ 1 - \log {n} + \log{e'e} + \log{|\Omega |^\frac{1}{n}}\right) $$
 
-Maximizing \\( l_c \\) is equivalent to minimizing the deviance 
+Maximizing $ l_c $ is equivalent to minimizing the deviance 
 
 $$ d \left( y | \theta\right ) = e'e |\Omega |^\frac{1}{n} = v'v, \quad where \quad v = \sqrt{ |\Omega |^\frac{1}{n} }\: e$$ 
 
