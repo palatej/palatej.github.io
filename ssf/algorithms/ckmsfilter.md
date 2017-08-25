@@ -6,7 +6,8 @@ $$ \Delta P_t = - L_t M_t^{-1} L_t' $$
 
 If we write:
 
-$$ K_t = T P_t Z' $$  
+$$ K_t = T P_t Z' $$ 
+
 $$ F_t = Z P_t Z' + H $$
 
 the CKMS recursions are:

@@ -21,6 +21,7 @@ Object-oriented programming can provide, through its polymorphic mechanism, a go
   * [ARMA](./implementations/arma_ssf.md)
   * [ARIMA](./implementations/arima_ssf.md)
   * Benchmarking
+    * [Generic ssf](./implementations/benchmarking_ssf.md)
     * [Cholette](./implementations/cholette_ssf.md) 
 
 

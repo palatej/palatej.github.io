@@ -60,7 +60,6 @@ $$ x = r_t T_t $$*
 $$ \tilde e_t =\left( v_t-x C_t\right)/f_t $$  
 $$ r_{t-1} = x + \tilde e_t Z_t $$*  
 $$ A = xl(xl(N_t)') $$    
-$$ N_{t-1} = A + Z_t' Z_t / f_t $$*   
 
 ##### xl operator
 The operator 
