@@ -1,4 +1,11 @@
-## State space representation of a cubic spline function
+---
+layout: left-menu
+title: Cubic spline
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Cubic spline
+order: 500
+---
+# {{page.description}}
 
 ### Introduction
 

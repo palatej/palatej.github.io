@@ -57,3 +57,7 @@ $$ P_{t+1} = T_t P_{t|t} T_t' + V_t $$
 
 This implementation is robust (the covariance matrices are symmetric by construction) and makes the computation of the likelihood easy. 
 Missing observations are excluded from the computation by adapting the size of the different matrices and arrays accordingly. In that way, we don’t have any problem of underdetermined systems. 
+
+### Implementation
+
+The ordinary filter is implemented in the classes `demetra.ssf.univariate.OrdinaryFilter` and `demetra.ssf.multivariate.MultivariateOrdinaryFilter`.

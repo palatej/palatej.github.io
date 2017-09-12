@@ -83,3 +83,6 @@ $$ xl(y) = q - w/f_t Z_t \quad *$$
 
 It can be applied on each row of a matrix 
 
+### Implementation
+
+The ordinary smoother is implemented in the classes `demetra.ssf.univariate.OrdinarySmoother` and `demetra.ssf.multivariate.MultivariateOrdinarySmoother`.
