@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>{{ page.title }}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ site.baseurl }}/styles/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ site.baseurl }}/styles/starter-template.css" rel="stylesheet">
+	
+	<!-- Syntax highlighting -->
+    <link href="{{ site.baseurl }}/styles/highlight.css" rel="stylesheet">
+	
+	<!-- Dashboard style -->
+    <link href="{{ site.baseurl }}/styles/dashboard.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+	{% include nav.html %}
+	<div class="container-fluid">
+	  <div class="row">
+		{% include docs/left-menu.html %}
+		<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+		  {{ content }}
+		</main>
+	  </div>
+	</div>
+	
+	{% include js.html %}
+  </body>
+</html>
