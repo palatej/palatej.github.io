@@ -1,7 +1,7 @@
 ---
 layout: left-menu
-title: Introduction
+title: STL
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: STL
-order: 0
+order: 500
 ---

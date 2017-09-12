@@ -1,8 +1,7 @@
 ---
 layout: left-menu
-title: Overview
+title: Seasonal Adjustment
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: Diagnostics on seasonal adjustment
+description: X13
 order: 0
 ---
-# {{page.description}}

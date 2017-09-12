@@ -1,7 +1,7 @@
 ---
 layout: left-menu
-title: Introduction
+title: Structural time series
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Structural time series
-order: 0
+order: 400
 ---
