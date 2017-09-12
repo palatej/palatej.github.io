@@ -1,4 +1,12 @@
-# Rational function expansion
+---
+layout: left-menu
+title: Rational function
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Rational function expansion
+order: 10
+---
+
+# {{page.description}}
 
 A rational function is defined as the ratio of two polynomials
 
@@ -33,4 +41,6 @@ $$ r_k=\frac{p_k-\sum_{i=1}^{k} {r_{k-i} q_i}}{q_0} \quad,\:k\le n $$
 <br>
 $$ r_k=\frac{p_k-\sum_{i=1}^{n} {r_{k-i} q_i}}{q_0} \quad,\:k\gt n $$
 
-Rational functions of polynomials with real coefficients are implemented in the class ___demetra.maths.polynomials.RationalFunction___
+### Implementation
+
+Rational functions of polynomials with real coefficients are implemented in the class `demetra.maths.polynomials.RationalFunction`

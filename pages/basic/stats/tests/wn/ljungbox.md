@@ -1,8 +1,15 @@
-# Ljung-Box test
+---
+layout: left-menu
+title: Ljung-Box
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Ljung-Box test
+order: 100
+---
+# {{page.description}}
 
 #### Overview
 
-The Ljung-Box test checks the "overall" randomnes of a time series using a given number of autocorrelations.   
+The Ljung-Box test checks the "overall" randomnes of a time series using a given number of [autocorrelations](../../descriptive.md).   
 It tests wether any of a group of autocorrelations of a time series are significantly different from 0.
 
 #### Algorithm
@@ -19,7 +26,7 @@ $$\chi \left(k\right)$$
 
 #### Implementation
 
-This test is implemented in the class ___demetra.stats.tests.LjungBoxTest___
+This test is implemented in the class `demetra.stats.tests.LjungBoxTest`
 
 #### Example
 

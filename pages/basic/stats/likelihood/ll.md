@@ -1,5 +1,12 @@
+---
+layout: left-menu
+title: Likelihood
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Likelihood of gaussian models
+order: 10
+---
 
-# Likelihood of gaussian models 
+# {{page.description}}
 
 ## Likelihood of a multivariate normal distribution 
 
