@@ -16,6 +16,7 @@ The pdf of a multivariate normal distribution is:
 $$p\left( y \right) = \left( 2 \pi \right)^{-\frac{n}{2}} \vert \Sigma \vert ^{-\frac{1}{2}}e^{ {-\frac{1}{2}y' \Sigma ^{-1} y} } $$
 
 If we set
+
 $$ y' \Sigma ^{-1} y=u'u \:\: or \:\:  L^{-1}y = u $$ 
 
 the log-likelihood is:

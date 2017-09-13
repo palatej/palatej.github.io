@@ -28,14 +28,14 @@ In other words, $V_t=S_t S_t'$
 
 The initial ($\equiv t=0$) conditions of the filter are defined as follows:
 
-$$ \alpha_{0} = a_{0} + B\delta + \mu_{0}, \quad \delta \sim N\left(0, \kappa I \right),\: \mu_{0} \sim N\left(0, P_*\right)$$
+$$ \alpha_{0} = a_{0} + B\delta + \mu_{0}, \quad \delta \sim N\left(0, \kappa \sigma^2 I \right),\: \mu_{0} \sim N\left(0,\sigma^2 P_*\right)$$
 
-where  $\kappa$ is arbitrary large. $P_*$ is the variance of the stationary part of the initial state vector and $BB'=P_\infty$
+where  $\kappa$ is arbitrary large. $P_*$ is the variance of the stationary part of the initial state vector and $BB'= P_\infty$
 models the diffuse part. 
 
 The definition used in JD+ is quasi-identical to that of Durbin and Koopman[1].
 
-In summary, the model is completely defined by the following quantities (possible default values are indicated in brackets):
+In summary, up to the scaling factor $\sigma^2$, the model is completely defined by the following quantities (possible default values are indicated in brackets):
 
 $$ \mathbf{Z_t}, \mathbf{H_t} [=0] $$
 

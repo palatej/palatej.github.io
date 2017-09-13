@@ -21,7 +21,7 @@ $$y_t^{C}=\sum_{k=t-t\mod{c}}^t{y_k} = y_t^{\underline{C}}+y_t $$
 So that $y_t^C=\mathbf{y}_{t/c}$  when $t+1$ is a multiple of $c$ and is unobserved otherwise.
 
 
-We consider that the unobserved disaggregated series has a state space form (SSF) identified by the state $\tilde\alpha_t$ and the system matrices $\left[{\tilde Z}_t,{\tilde H}_t,\tilde T_t,\tilde V_t, \tilde S_t, \tilde a_{-1}, \tilde P_*,\tilde B,\tilde P_\infty \right]$ (see [Ssf model](../model.md) ).
+We consider that the unobserved disaggregated series has a state space form (SSF) identified by the state $\tilde\alpha_t$ and the system matrices $\left[ \tilde Z_t,\tilde H_t,\tilde T_t,\tilde V_t, \tilde S_t, \tilde a_{-1}, \tilde P_*,\tilde B,\tilde P_\infty \right]$ (see [Ssf model](../model.md) ).
 
 The benchmarking SSF is the original SSF extended by the cumulator variable
 
