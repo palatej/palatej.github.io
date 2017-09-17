@@ -3,6 +3,7 @@ layout: left-menu
 title: Diffuse initialization
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: State space model. Diffuse initialization (Durbin Koopman)
+category: Initialization
 order: 200
 ---
 

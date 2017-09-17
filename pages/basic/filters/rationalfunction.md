@@ -3,6 +3,7 @@ layout: left-menu
 title: Rational function
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Rational function expansion
+category: 
 order: 10
 ---
 

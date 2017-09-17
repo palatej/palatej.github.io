@@ -3,6 +3,7 @@ layout: left-menu
 title: Array filter
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: State space model. Array filter
+categoy: Main algorithms
 order: 30
 ---
 # Array algorithm

@@ -39,11 +39,7 @@ We also have that $y_{t+i|t} = \sum_{j=i}^\infty {\psi_j \epsilon_{t+i-j}}$
 $$ T_t = \begin{pmatrix}0 &1 & 0 & \cdots & 0  \\0& 0 & 1 & \cdots & 0\\ \vdots & \vdots & \vdots & \ddots & \vdots\\ 0 & 0 & 0 & \cdots & 1\\
 0 & -\varphi_r & \cdots & \cdots &-\varphi_1 \end{pmatrix}$$
 
-<br>
-
 $$ S_t = \begin{pmatrix}1 \\ \psi_1 \\ \vdots\\ \psi_s \end{pmatrix} $$  
-
-<br>
 
 $$ V_t = S S' $$
 
@@ -51,15 +47,11 @@ $$ V_t = S S' $$
 
 $$ Z_t = \begin{pmatrix} 1 & 0 & \cdots & 0\end{pmatrix}$$
 
-<br>
-
 $$ h_t = 0 $$
 
 #### Initialization 
 
 $$ \alpha_{-1} = \begin{pmatrix}1 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
-
-<br>
 
 $$ P_{*} = \Omega $$
 

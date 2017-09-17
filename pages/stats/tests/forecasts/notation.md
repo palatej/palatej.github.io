@@ -3,7 +3,8 @@ layout: left-menu
 title: Basic Notation
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Introducing the notation
-order: 1
+category: Forecast evaluation 
+order: 10
 ---
 
 # Notation 

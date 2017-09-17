@@ -3,6 +3,7 @@ layout: left-menu
 title: CKMS filter
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: State space model. Fast CKMS filter
+categoy: Main algorithms
 order: 20
 ---
 # CKMS filter (or fast Chandrasekhar recursions)

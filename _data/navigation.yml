@@ -1,16 +1,24 @@
 - title: "Home"
   href: "/"
-- title: "Basic algorithms"
+- title: "Math"
   href: "/pages/basic/"
   subitems:
-    - title: "Statistics"
-      href: "stats/"
     - title: "Matrices"
       href: "matrices/"
     - title: "Optimization"
       href: "functions/"
     - title: "Various"
       href: "math/"
+- title: "Statistics"
+  href: "/pages/stats/"
+  subitems:
+    - title: "Tests"
+      href: "tests/"
+    - title: "Arima"
+      href: "arima/"
+    - title: "Various"
+      href: "various/"
+
 - title: "State space framework"
   href: "/pages/ssf/"
   subitems:
@@ -29,8 +37,6 @@
       href: "methods/"
     - title: "Diagnostics"
       href: "diagnostics/"
-- title: "Tests"
-  href: "/pages/tests/"
 - title: "Benchmarking"
   href: "/pages/bench/"
   subitems:

@@ -16,12 +16,19 @@
 				<a class="nav-link dropdown-toggle" href="{{ menu.href }}" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ menu.title }}</a>
 				<div class="dropdown-menu" aria-labelledby="dropdown01">
 				{% for item in menu.subitems %}
+				{% capture url %}{{ menu.href }}{{ item.href }}{% endcapture %}
+				{% if page.url contains url %}
+				{% capture current_folder %}{{ url }}{% endcapture %}
+				{% endif %}
 					<a class="dropdown-item" href="{{ menu.href }}{{ item.href }}">{{ item.title }}</a>
 				{% endfor %}
 				</div>
 			</li>
 		{% else %}
-			<li {% if p.url == page.url %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+			{% if page.url contains menu.href %}
+			{% capture current_folder %}{{ menu.href }}{% endcapture %}
+			{% endif %}
+			<li {% if menu.href == page.url %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
 				<a class="nav-link" href="{{ menu.href }}">{{ menu.title }}</a>
 			</li>
 		{% endif %}

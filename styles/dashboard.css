@@ -68,3 +68,62 @@ h1 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+/*
+ * Drop down left menu
+ */
+nav.left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav.left ul li a:hover {
+	color: #FFF;
+}
+
+nav.left ul li a {
+  display: block;
+  background: #F7F7F7;
+  color: #292B2C;
+  padding: 10px 15px;
+  text-decoration: none;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+nav.left ul li a:hover {
+  background: #2980b9;
+  color: #FFF;
+}
+nav.left ul li a.active {
+  background: #2980b9;
+  color: #FFF;
+}
+
+nav.left ul li a .fa {
+  width: 16px;
+  text-align: center;
+  padding-top:5px;
+  margin-right: 5px;
+}
+
+nav.left ul li ul li a {
+  background: #444;
+  border-left: 4px solid transparent;
+  color: #FFF;
+  padding: 10px 20px;
+}
+nav.left ul li ul li a:hover {
+  background: #333;
+  border-left: 4px solid #3498db;
+}
+
+/* Float Right/Left */
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}

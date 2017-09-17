@@ -3,6 +3,7 @@ layout: left-menu
 title: Likelihood
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Likelihood of gaussian models
+category: Likelihood
 order: 10
 ---
 

@@ -3,6 +3,7 @@ layout: left-menu
 title: Descriptive statistics
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Descriptive statistics
+category: Descriptive statistics
 order: 10
 ---
 # {{page.description}}

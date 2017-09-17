@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!--<link rel="icon" href="../../favicon.ico">-->
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico?">
 
     <title>{{ page.title }}</title>
 
@@ -20,20 +20,22 @@
 	
 	<!-- Dashboard style -->
     <link href="{{ site.baseurl }}/styles/dashboard.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+	<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700'>
   </head>
 
   <body>
-	{% include nav.html %}
+	{% include nav.html %}	
+	
 	<div class="container-fluid">
 	  <div class="row">
-		{% include docs/left-menu.html %}
+	    {% include left-menu.html folder=current_folder %}
 		<main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
 		  {{ content }}
 		</main>
 	  </div>
 	</div>
-	
 	{% include js.html %}
   </body>
 </html>

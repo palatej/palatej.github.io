@@ -1,9 +1,8 @@
 ---
 layout: left-menu
-title: Overview
+title: Introduction
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: White noise tests
+description: Linear filters
 order: 0
+category: Linear filters
 ---
-# {{page.description}}
-
