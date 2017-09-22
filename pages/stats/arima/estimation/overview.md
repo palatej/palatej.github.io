@@ -1,4 +1,12 @@
-# Estimation of ARMA models
+---
+layout: left-menu
+title: Introduction
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Estimation of ARMA models
+category: Arima estimation
+order: 0
+---
+# {{page.description}}
 
 The computation of [exact likelihood](../../stats/likelihood/ll.md) requires the evaluation of two main quantities: the determinant of the covariance matrix and the sum of the squared residuals.
 The different algorithms for the computation of the likelihood of ARMA models provides efficient solutions for those two problems.
@@ -16,6 +24,7 @@ might be considered. Note that m can be larger than n (which means that the tran
 
 JD+ provides several routines for estimating the exact likelihood of ARMA models
 
+{: .table .table-bordered}
 | Algorithm | Use |
 | --------- | --- | 
 | Kalman filter  | Default |

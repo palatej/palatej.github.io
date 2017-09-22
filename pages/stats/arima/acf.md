@@ -1,4 +1,12 @@
-# Autocovariance function of ARMA model
+---
+layout: left-menu
+title: Auto-covariance
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: Auto-covariance of Arima model
+category: Properties
+order: 100
+---
+# {{page.description}}
 
 The autocovariances of an ARMA model can be computed using several algorithms. JD+ provides two implementations, which are chosen in an automatic way.
 

@@ -1,9 +1,9 @@
 ---
 layout: left-menu
-title: Kalman filter
+title: Trading days
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: Kalman filter
-category: Arima estimation
+description: Trading days
 order: 10
+category: variables
 ---
-# {{page.description}}
+{{page.description}}

@@ -120,6 +120,11 @@ nav.left ul li ul li a:hover {
   border-left: 4px solid #3498db;
 }
 
+nav.left ul li.sub-menu ul li a.active {
+  background: #333;
+  border-left: 4px solid #3498db;
+}
+
 /* Float Right/Left */
 .right {
   float: right;
