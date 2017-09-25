@@ -1,10 +1,9 @@
 <nav class='col-sm-3 col-md-2 hidden-xs-down bg-faded sidebar left'>
 <ul>
-  {% assign groups = (site.pages | where_exp:"p", "p.url contains include.folder" | group_by: "category" | sort: "category") %}
+  {% assign groups = (site.pages | where_exp:"p", "p.url contains include.folder" | sort:"order" | group_by: "category") %}
 	{% for g in groups %}
 		{% if g.name == "" %}
-			{% assign sorted_pages = (g.items | sort:'order' ) %}
-			{% for p in sorted_pages %}
+			{% for p in g.items %}
 			<li>
 			  <a {% if p.url == page.url %} class="active" {% endif %} href="{{ p.url }}">{{ p.title }}</a>
 			</li>
@@ -16,8 +15,7 @@
 		<li class="sub-menu">
 			<a href="#">{{g.name}}<div class='fa fa-caret-down right'></div></a>
 			<ul {% if g.name == page.category %} class="opened" {% endif %}>
-			{% assign sorted_pages = (g.items | sort:'order' ) %}
-			{% for p in sorted_pages %}
+			{% for p in g.items %}
 				<li><a {% if p.url == page.url %} class="active" {% else %} {% endif %} href="{{ p.url }}">{{ p.title }}</a></li>
 			{% endfor %}
 			</ul>

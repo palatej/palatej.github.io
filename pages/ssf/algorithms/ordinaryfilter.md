@@ -1,8 +1,9 @@
 ---
 layout: left-menu
 title: Ordinary filter
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: State space model. Ordinary Kalman filter
+category: Default
 order: 10
 ---
 

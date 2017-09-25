@@ -4,7 +4,7 @@ title: Box-Pierce
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Box-Pierce test
 category: White noise tests
-order: 100
+order: 1020
 ---
 # {{page.description}}
 

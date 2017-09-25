@@ -4,6 +4,6 @@ title: Ansley
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Ansley algorithm
 category: Arima estimation
-order: 20
+order: 520
 ---
 # {{page.description}}

@@ -4,7 +4,7 @@ title: Diebold-Mariano Test
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Description of Diebold-Mariano Test
 category: Forecast evaluation 
-order: 40
+order: 3040
 ---
 
 # Diebold-Mariano Test 

@@ -1,4 +1,12 @@
-# QS Test for seasonality
+---
+layout: left-menu
+title: QS test
+tagline: technical documentation for JDemetra+ using GitHub Pages
+description: QS Test for seasonality
+category: Seasonality tests
+order: 2010
+---
+# {{page.description}}
 
 The QS test is a variant of the [Ljung-Box](../wn/ljungbox.md) test computed on seasonal lags, where we only consider positive auto-correlations
 

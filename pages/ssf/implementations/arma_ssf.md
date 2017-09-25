@@ -3,10 +3,11 @@ layout: left-menu
 title: ARMA model
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: State space representation of ARMA model
-order: 10
+category: "Arima"
+order: 2010
 ---
 
-# ARMA ssf
+# {{page.description}}
 
 #### Introduction
 

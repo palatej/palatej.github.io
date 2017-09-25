@@ -1,9 +1,10 @@
 ---
 layout: left-menu
 title: Likelihood evaluation
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: Likelihood evaluation
-order: 20
+category: Default
+order: 200
 ---
 
 # {{page.description}}
@@ -34,21 +35,27 @@ $$l(y\vert \theta, \sigma^2) = \lim_{k \rightarrow \infty} \left(l(y \vert k, \t
 This is similar to Francke et al.(2010), (equation 14).
 Apart from the scaling factor, it also identical to the approach of Ansley and Kohn (1985) (theorem 5.1). 
 
+#### Durbin-Koopman approach
+
 The expression of the log-likelihood for stationary model as to be corrected by the term
 
 $$ -1/2 \sum_{i=1}^d {\log \vert F_{\infty, i} \vert }$$
 
 to get the diffuse likelihood by means of the approach of [Durbin and Koopman](dk/md). To simplify the notations, we considered above that the diffuse initialization is performed with the first $d$ observations. See DK for the general case. 
 
- #### Bibliography
+#### De Jong approach
+
+
+### Bibliography
 ANSLEY F. C. and KOHN R. (1985), “Estimating, filtering and smoothing in state space models with incompletely specified initial conditions”, The annals of statistics, vol. 13, n°4, 1286-1316.  
 
 DURBIN J. AND KOOPMAN S.J. (2012): "Time Series Analysis by State Space Methods", second edition. Oxford University Press.
 
 FRANCKE, M. K., KOOPMAN, S. J. and DE VOS, A. F. (2010), “Likelihood functions for state space models with diffuse initial conditions”, Journal of Time Series Analysis, 31, 6.
 
+<hr>
 
- #### Implementation
+#### Implementation
 
  The diffuse likelihood is implemented in the class `demetra.ssf.dk.DkLikelihood`. The likelihood of stationary models is handled by the same class.
  The computation of the diffuse likelihood is generate by the method `likelihoodComputer` of the class `demetra.ssf.dk.DkToolkit` or by one of its variants.

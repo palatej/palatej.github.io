@@ -7,8 +7,8 @@
       href: "matrices/"
     - title: "Optimization"
       href: "functions/"
-    - title: "Various"
-      href: "math/"
+    - title: "Linear filters"
+      href: "filters/"
 - title: "Statistics"
   href: "/pages/stats/"
   subitems:
@@ -18,13 +18,12 @@
       href: "arima/"
     - title: "Various"
       href: "various/"
-
 - title: "State space framework"
   href: "/pages/ssf/"
   subitems:
-    - title: "Main algorithms"
+    - title: "Algorithms"
       href: "algorithms/"
-    - title: "Implementations"
+    - title: "Models"
       href: "implementations/"
 - title: "Time series"
   href: "/pages/ts/"

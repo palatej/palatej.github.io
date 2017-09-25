@@ -1,7 +1,7 @@
 ---
 layout: left-menu
 title: State space framework
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: State space framework
 order: 0
 ---

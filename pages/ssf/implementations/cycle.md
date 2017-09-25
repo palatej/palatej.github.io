@@ -1,9 +1,9 @@
 ---
 layout: left-menu
-title: Introduction
+title: Cycle
 tagline: JD+. State space models
-description: Strutural time series. Overview.
+description: Cycle component
 category: STS
-order: 3000
+order: 3050
 ---
 {{page.description}}

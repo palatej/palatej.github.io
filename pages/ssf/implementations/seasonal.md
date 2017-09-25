@@ -1,9 +1,9 @@
 ---
 layout: left-menu
-title: Introduction
+title: Seasonal
 tagline: JD+. State space models
-description: Strutural time series. Overview.
+description: Seasonal component
 category: STS
-order: 3000
+order: 3100
 ---
 {{page.description}}

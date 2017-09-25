@@ -1,9 +1,10 @@
 ---
 layout: left-menu
 title: Cubic spline
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: Cubic spline
-order: 500
+category: Various
+order: 5000
 ---
 # {{page.description}}
 

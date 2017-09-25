@@ -1,15 +1,14 @@
 ---
 layout: left-menu
 title: Diffuse initialization
-tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space model. Diffuse initialization (Durbin Koopman)
+tagline: JD+. State space models
+description: Diffuse initialization (Durbin Koopman)
 category: Initialization
 order: 200
 ---
+# {{page.description}}
 
 We describe below the diffuse initialization of Durbin-Koopman and a variant that we call "partial square root initialization"
-
-### DK initialization
 
 When $y_t$ is observed, we compute the following recursions 
 

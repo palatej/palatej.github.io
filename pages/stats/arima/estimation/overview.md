@@ -4,7 +4,7 @@ title: Introduction
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Estimation of ARMA models
 category: Arima estimation
-order: 0
+order: 500
 ---
 # {{page.description}}
 

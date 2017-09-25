@@ -4,7 +4,7 @@ title: Basic Notation
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Introducing the notation
 category: Forecast evaluation 
-order: 10
+order: 3000
 ---
 
 # Notation 

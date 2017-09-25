@@ -1,7 +1,7 @@
 ---
 layout: left-menu
 title: Notations
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: Notations
 order: 5
 ---

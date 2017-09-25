@@ -4,7 +4,7 @@ title: Ljung-Box
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Ljung-Box test
 category: White noise tests
-order: 110
+order: 1010
 ---
 # {{page.description}}
 

@@ -1,8 +1,9 @@
 ---
 layout: left-menu
 title: Ordinary smoother
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: State space model. Ordinary Kalman smoother
+category: Default
 order: 100
 ---
 

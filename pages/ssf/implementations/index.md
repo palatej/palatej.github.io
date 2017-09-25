@@ -1,7 +1,8 @@
 ---
 layout: left-menu
 title: Introduction
-tagline: technical documentation for JDemetra+ using GitHub Pages
-description: Tests
+tagline: JD+. State space models
+description: States space models
 order: 0
 ---
+{{page.description}}

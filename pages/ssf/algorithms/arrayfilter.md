@@ -1,12 +1,12 @@
 ---
 layout: left-menu
 title: Array filter
-tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space model. Array filter
-categoy: Main algorithms
-order: 30
+tagline: JD+. State space models
+description: Array filter
+category: "Others"
+order: 1030
 ---
-# Array algorithm
+# {{page.description}}
 
 Using the following notations:
 

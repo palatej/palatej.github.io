@@ -4,7 +4,7 @@ title: Likelihood
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Likelihood of gaussian models
 category: Likelihood
-order: 10
+order: 1000
 ---
 
 # {{page.description}}

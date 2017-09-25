@@ -1,12 +1,12 @@
 ---
 layout: left-menu
 title: CKMS filter
-tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space model. Fast CKMS filter
-categoy: Main algorithms
-order: 20
+tagline: JD+. State space models
+description: Fast CKMS filter (or fast Chandrasekhar recursions)
+category: "Others"
+order: 1020
 ---
-# CKMS filter (or fast Chandrasekhar recursions)
+# {{page.description}}
 
 When the [model](index.md) is time invariant (which also implies that we don’t have missing values), it is usually much more efficient to use the Chandrasekhar recursions, which propagate the difference of the covariance matrix:
 

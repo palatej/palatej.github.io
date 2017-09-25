@@ -1,12 +1,13 @@
 ---
 layout: left-menu
 title: ARIMA model
-tagline: technical documentation for JDemetra+ using GitHub Pages
+tagline: JD+. State space models
 description: State space representation of ARIMA model
-order: 20
+category: "Arima"
+order: 2020
 ---
 
-# ARIMA ssf
+# {{page.description}}
 
 We consider that the auto-regressive polynomial contains some unit roots. It can be factorized in a stationary polynomial (defined by the roots outside the unit circle) and in a non-stationary polynomial (defined by the roots on the unit circle), which is notated:
 
