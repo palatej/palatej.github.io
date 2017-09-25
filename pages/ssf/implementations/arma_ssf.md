@@ -2,7 +2,7 @@
 layout: left-menu
 title: ARMA model
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space representation of ARMA model
+description: State space representation of an ARMA model
 category: "Arima"
 order: 2010
 ---
@@ -61,3 +61,10 @@ $\Omega$ is the unconditional covariance of the state array; it can be easily de
 $$ \Omega\left(i,0\right) = \gamma_i $$  
 
 $$ \Omega\left(i,j\right) = \Omega\left(i-1,j-1\right)-\psi_i \psi_j $$  
+
+<hr>
+
+#### Implementation
+
+ARMA models are implemented in the class `demetra.arima.ssf.SsfArima`
+

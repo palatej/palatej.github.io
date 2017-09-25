@@ -1,12 +1,13 @@
 ---
 layout: left-menu
-title: Cholette (SSF)
+title: Cholette 
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space representation of the Cholette algorithm
-order: 200
+description: Cholette algorithm
+order: 1200
+category: Univariate
 ---
 
-# State space form for the Cholette algorithm
+# {{page.description}}
 
 ### Introduction
 

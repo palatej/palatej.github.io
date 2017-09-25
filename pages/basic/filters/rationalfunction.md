@@ -29,18 +29,17 @@ is computed by equating the coefficients of
 
 $$ R\left( x \right) Q\left( x \right) \quad and \quad P\left( x \right) $$
 
-we get
+Using the convention that $p_k=0$ if $k>m$ we get
 
 $$ r_0 = \frac{p_0} {q_0} $$
-<br>
+ 
 $$ r_1 = \frac{ p_1 - r_0 q_1} { q_0 } $$
-<br>
+ 
 $$ \cdots $$
-<br>
-$$ r_k=\frac{p_k-\sum_{i=1}^{k} {r_{k-i} q_i}}{q_0} \quad,\:k\le n $$
+ 
+$$ r_k=\begin{cases}\frac{p_k-\sum_{i=1}^{k} {r_{k-i} q_i}}{q_0} & if &k\le n \\ \frac{p_k-\sum_{i=1}^{n} {r_{k-i} q_i}}{q_0}& if & k\gt n \end{cases}$$
 
-<br>
-$$ r_k=\frac{p_k-\sum_{i=1}^{n} {r_{k-i} q_i}}{q_0} \quad,\:k\gt n $$
+<hr>
 
 ### Implementation
 

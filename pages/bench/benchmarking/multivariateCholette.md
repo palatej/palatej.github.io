@@ -1,14 +1,14 @@
 ---
 layout: left-menu
-title:  Multivariate Cholette (SSF)
+title:  Multivariate Cholette
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space representation of the multi-variate Cholette
-order: 220
+description: Multi-variate Cholette
+order: 2100
 ---
 
-# Multivariate Cholette
+# {{page.description}}
 
-### Introduction
+#### Introduction
 
 Given a set of initial time series $\left\lbrace z_{i,t}\right\rbrace_{i \in I}$ we have to find the corresponding  $\left\lbrace x_{i,t}\right\rbrace_{i \in I}$ that respect temporal aggregation constraints, represented by $\mathbf{x_{i,T}}=\sum_{t \in T}x_{i,t}$ and contemporaneous constraints given by $q_{k,t}=\sum_{j \in J_k}{w_{k,j}x_{j,t}}$ or, in matrix form $q_{k,t} = w_k x_t$
 
@@ -16,7 +16,9 @@ The multi-variate Cholette's method consists in minimizing the following quadrat
 
 $$ \sum_{i,t}{\left( \left( \frac{x_{i,t}-z_{i,t}}{|z_{i,t}|^\lambda} \right)-\rho \left( \frac{x_{i,t-1}-z_{i,t-1}}{|z_{i,t-1}|^\lambda} \right) \right)^2} $$
 
+JD+ uses state space models for representing the Cholette method.
 
+#### State space form
 
 The state space representation of the multi-variate benchmarking model is obtained by juxtaposing the different matrices of the univariate models(see [univariate Cholette](.\cholette_ssf.md)) (one for each series involved in the model) and by adding, for each linear constraint, the corresponding "measurement" equation.
 

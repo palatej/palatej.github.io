@@ -9,7 +9,7 @@ order: 1000
 
 # {{page.description}}
 
-## Likelihood of a multivariate normal distribution 
+#### Likelihood of a multivariate normal distribution 
 
 
 The pdf of a multivariate normal distribution is:
@@ -54,7 +54,7 @@ $$ d \left( y | \theta\right ) = e'e |\Omega |^\frac{1}{n} = v'v, \quad where \q
 
 This last formulation will be used in optimization procedures based on sums of squares (Levenberg-Marquardt and similar algorithms).
 
-## Linear model with gaussian noises
+#### Linear model with gaussian noises
 
 The likelihood is often computed on a linear model
 $$ y=X\beta + \mu \quad \mu \sim N\left(0, \sigma^2\Omega\right) $$
@@ -72,7 +72,14 @@ $$ \sigma^2 \left( X'\Omega^{-1}X\right)^{-1} $$
 The formulae of the likelihood are still valid, using
 $$ e=L^{-1} \left(y-X\hat\beta \right) $$
 
-## Implementation
+#### Bibliography
+
+_Gomez V. and Maravall A._ (1994): "Estimation, Prediction, and Interpolation for Nonstationary Series With the Kalman Filter", Journal of the American Statistical Association, vol. 89, n° 426, 611-624.
+
+
+<hr>
+
+### Implementation
 
 Those representations of the concentrated likelihood are defined in the interfaces ___demetra.likelihood.ILikelihood___ and ___demetra.likelihood.IConcentratedLikelihood___
 
@@ -85,17 +92,14 @@ Those representations of the concentrated likelihood are defined in the interfac
 * $v$ : v()
 * $\|\Omega\|^{\frac{1}{n}}$ : factor() 
 
-## Remarks 
+#### Remarks 
 
 
-### Missing values 
+##### Missing values 
 
 Missing values are not taken into account in the likelihood. More especially, when they are estimated by means of additive outliers, all the different elements of the likelihood (dimension,  determinantal term, coefficients…) should be adjusted to remove their effect.
 
-### Perfect collinearity in X
+##### Perfect collinearity in X
 
 In the case of perfect collinearity in the linear model, the dimensions of the coefficients and of the related matrices are not modified. However, information related to the redundant variables is set to 0.
 
-### Bibliography
-
-_Gomez V. and Maravall A._ (1994): "Estimation, Prediction, and Interpolation for Nonstationary Series With the Kalman Filter", Journal of the American Statistical Association, vol. 89, n° 426, 611-624.
