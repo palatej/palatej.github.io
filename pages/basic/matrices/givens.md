@@ -12,4 +12,4 @@ category: Elementary transformations
 
 #### Implementations
 
-Givens rotations are implemented in the class `demetra.maths.matrices.internal.GivensRotation`.
+Givens rotations are implemented in the class `demetra.maths.matrices.GivensRotation`.

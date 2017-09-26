@@ -88,6 +88,8 @@ $$\begin{pmatrix} 0 \\ B_t \end{pmatrix} \rightarrow \begin{pmatrix} Z_t B_t \\ 
 Contrary to the usual array algorithm, we don’t compute a complete triangularization: processing the first rows, which correspond to the measurement equations, is indeed sufficient. So, in the case of a univariate series, we just have to use a single householder reflection to compute the next $B_{t+1}$. 
 To be noted that that formulation shows in an obvious way that the rank of $B_t$ will decrease by $rank(F_{\infty t})$ at each step. That implies that, after every iteration, the matrix $B_t$ becomes smaller and the computations less expensive.
 
+<hr>
+
 ### Implementation
 
 The Diffuse initialization is implemented in several classes
