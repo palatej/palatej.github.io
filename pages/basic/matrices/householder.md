@@ -7,3 +7,9 @@ order: 100
 category: Elementary transformations
 ---
 # {{page.description}}
+
+<hr>
+
+#### Implementations
+
+Householder reflections are implemented in the class `demetra.maths.matrices.internal.HouseholderReflection`
