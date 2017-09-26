@@ -1,9 +1,9 @@
 ---
 layout: left-menu
-title: LU decomposition
+title: Cholesky factoring
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: LU decomposition
-order: 1080
+description: Cholesky factoring of (semi-)definite symmetric matrices
+order: 1020
 category: Decomposition
 ---
 # {{page.description}}

@@ -3,7 +3,7 @@ layout: left-menu
 title: QR decomposition
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: QR decomposition
-order: 1000
+order: 1060
 category: Decomposition
 ---
 # {{page.description}}

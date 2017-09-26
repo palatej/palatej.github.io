@@ -6,7 +6,7 @@ description: Ramp
 order: 100
 category: variables
 ---
-{{page.description}}
+# {{page.description}}
 
 A ramp $r$ is defined by its starting date $t_0$ and its ending date $t_1$
 

@@ -2,7 +2,8 @@
 layout: left-menu
 title:  Multivariate Cholette
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: Multi-variate Cholette
+description: Multivariate Cholette
+category: Multivariate
 order: 2100
 ---
 

@@ -6,4 +6,4 @@ description: Trading days
 order: 10
 category: variables
 ---
-{{page.description}}
+# {{page.description}}

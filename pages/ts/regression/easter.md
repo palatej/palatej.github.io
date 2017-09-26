@@ -6,10 +6,10 @@ description: Easter holiday
 order: 20
 category: variables
 ---
-{{page.description}}
+# {{page.description}}
 
 The Easter variable defines a time period before Easter. The Easter effect is defined by the relative number of days that occurs in the different months (February, March, April and May for the JulianEaster) or quarters (first or second quarter). 
-To avoid seasonal effects, the variable is corrected using long term mean corrections. Tramo uses a very simple correction: we remove 0.5 from March and from April (independently of the duration); X13 uses a more sophisticated solution. JD+ provides both solutions.
+To avoid seasonal effects, the variable is corrected using long term mean corrections. Tramo uses a very simple correction: we remove 0.5 from March and from April (independently of the duration); X13 uses a more sophisticated solution. JD+ provides both solutions, with a correction based on the approximate theoretical distribution of Easter in the calendar.
 
 For instance, using a duration of 10 and considering that the end day is Easter (see below), we have:
 
@@ -30,3 +30,9 @@ As mentioned above, the long term mean correction is always -.5 for March and fo
 EASTER IN X13
 The Easter period in X13 is defined by the daily period [end – duration, end] where end is Easter-1.
 The long term mean corrections have been computed on a long period, for all possible durations.
+
+<hr>
+
+#### Implementation
+
+The computation of Easter is given by the class `demetra.timeseries.calendars.Easter`. The regression variable for Easter is given by  the class `demetra.timeseries.regression.EasterVariable`. The Easter variable is only computed for monthly and quarterly series.

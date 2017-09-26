@@ -6,4 +6,4 @@ description: Outliers
 order: 50
 category: variables
 ---
-{{page.description}}
+# {{page.description}}
