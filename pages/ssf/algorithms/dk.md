@@ -8,7 +8,7 @@ order: 200
 ---
 # {{page.description}}
 
-We describe below the diffuse initialization of Durbin-Koopman and a variant that we call "partial square root initialization"
+We describe below the diffuse initialization of Durbin-Koopman (DK) and a variant that we call "partial square root initialization"
 
 When $y_t$ is observed, we compute the following recursions 
 
@@ -92,7 +92,26 @@ To be noted that that formulation shows in an obvious way that the rank of $B_t$
 
 The Diffuse initialization is implemented in several classes
 
-* The "Durbin Koopman" initialization of the filter is provided by the class `demetra.ssf.dk.DurbinKoopmanInitializer` 
+* The "Durbin-Koopman" initialization of the filter is provided by the class `demetra.ssf.dk.DurbinKoopmanInitializer` 
 * The corresponding "Durbin Koopman" smoother is provided by the class `demetra.ssf.dk.DiffuseSmoother` 
 * The "Partial square root" initialization of the filter is provided by the class  `demetra.ssf.dk.sqrt.DiffuseSquareRootInitializer`
 * The corresponding diffuse square root smoother is provided by the class  `demetra.ssf.dk.sqrt.DiffuseSquareRootSmoother`.
+
+The different algorithms based on the DK initialization are put together in the class `demetra.ssf.dk.DkToolkit`. This is illustrated by the piece of code hereafter.
+
+```java
+        // Creation of the ssf of an airline model
+        SarimaSpecification spec = new SarimaSpecification(12);
+        spec.airline();
+        arima = SarimaModel.builder(spec).theta(1, -.6).btheta(1, -.8).build();
+        data = Data.PROD.clone();
+        SsfArima ssf = SsfArima.of(arima);
+        // data
+        SsfData ssfData = new SsfData(data);
+        // computation of the diffuse likelihood
+        DkLikelihood ll1 = DkToolkit.likelihoodComputer().compute(ssf, ssfData);
+        // filtering
+        DefaultDiffuseFilteringResults frslts = DkToolkit.filter(ssf, ssfData, true);
+       // square root form
+        DefaultDiffuseSquareRootFilteringResults frslts2 = DkToolkit.sqrtFilter(ssf, ssfData, true);
+```
