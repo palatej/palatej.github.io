@@ -21,10 +21,13 @@ univariate case:
 
 $$\log l_c(\theta \vert y)=-1/2\left(n \log(2 \pi) + n  + n\log \frac{1}{n}\sum_{i=1}^n e_i^2/f_i + \sum_{i=1}^n {\log \vert f_i \vert }\right)$$
 
+$$=-1/2\left(n \log(2 \pi) + n  -n \log n + n\log \sum_{i=1}^n e_i^2/f_i + \sum_{i=1}^n {\log \vert f_i \vert }\right)$$
 
 multi-variate case:
 
 $$\log l_c(\theta \vert y)=-1/2\left(n \log(2 \pi) + n  + n\log \frac{1}{n}\sum_{i=1}^n u_i' u_i + 2\sum_{i=1}^n {\log \vert R_i \vert }\right)$$
+
+$$=-1/2\left(n \log(2 \pi) + n  - n\log n + n \log \sum_{i=1}^n u_i' u_i + 2\sum_{i=1}^n {\log \vert R_i \vert }\right)$$
 
 ### Diffuse models
 
@@ -44,6 +47,7 @@ $$ -1/2 \sum_{i=1}^d {\log \vert F_{\infty, i} \vert }$$
 to get the diffuse likelihood by means of the approach of [Durbin and Koopman](dk/md). To simplify the notations, we considered above that the diffuse initialization is performed with the first $d$ observations. See DK for the general case. 
 
 #### De Jong approach
+
 
 
 ### Bibliography
