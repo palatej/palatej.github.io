@@ -8,7 +8,7 @@ order: 2010
 ---
 # {{page.description}}
 
-The QS test is a variant of the [Ljung-Box](../wn/ljungbox.md) test computed on seasonal lags, where we only consider positive auto-correlations
+The QS test is a variant of the [Ljung-Box](../wn/ljungbox.html) test computed on seasonal lags, where we only consider positive auto-correlations
 
 More exactly,
 
