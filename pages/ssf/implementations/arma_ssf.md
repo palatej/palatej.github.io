@@ -27,7 +27,7 @@ The MA representation of the model is $y_t=\sum_{i=0}^\infty {\psi_i \epsilon_{t
 
 Using those notations, the state-space model can be written as follows :
 
-#### State vector: 
+##### State vector: 
 
 $$ \alpha_t= \begin{pmatrix} y_t \\ y_{t+1|t} \\ \vdots \\ y_{t+s|t} \end{pmatrix}$$  
 
