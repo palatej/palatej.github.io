@@ -43,5 +43,13 @@ One could test the following hypothesis involving forecast errors:
 |   Forecast  $$ \hat{y}_{t} $$  encompases   $$ \breve{y}_{t} $$ |   $$ E[(e_{t}-\breve{e}_{t})e_{t}]=0  $$  	|   `EncompassingTest`         |
 |   Forecast   $$\breve{y}_{t}$$   encompases   $$ \hat{y}_{t} $$ |   $$ E[(\breve{e}_{t}-e_{t})\breve{e}_{t}]=0 $$ |     `EncompassingTest`   |
 
+$$  $$
+
 The subsequent pages describe the implementation details of the various tests within *J*Demetra*+*
-and examples of how to construct them.
+and examples of how to construct them:
+
+- [Diebold-Mariano](dm.html)
+- [Encompassing](dm.html)
+- [Bias](bias.html)
+
+

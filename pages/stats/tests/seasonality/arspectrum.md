@@ -48,6 +48,11 @@ Jdemetra+ exploits critical values for $$ \alpha=1\%$$  (code “A”) and $$ \a
 simulation experiment to calculate $$ CV(\lambda_{42}) $$ (trading day frequency) and proposes to set for all $$j$$ equal 
 to the critical value associated to the trading frequency.  
 
+![alt text][spectralResuts]
+
+[spectralResuts]: https://palatej.github.io/pages/stats/tests/seasonality/images/spectral.png "Logo Title Text 1"
+
+
 ####  References
 
 - Soukup, R.J., and D.F. Findley (1999) On the Spectrum Diagnosis used by X12-ARIMA to Indicate the Presence of Trading Day Effects After Modeling or Adjustment. In Proceedengs of the American Statistical Association. Business and Economic Statistics Section, 144-149, Alexandria, VA.

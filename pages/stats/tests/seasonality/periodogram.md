@@ -84,6 +84,10 @@ where  $$ \delta=1 $$  if $$ n $$ is even and 0 otherwise.
 The test performs better in small samples when periodogram is evaluated as the exact seasonal frequencies.  JDemetra+  modifies the sample size 
 to ensure the seasonal frequencies belong to the set of Fourier frequencies.   This strategy provides a very simple and effective way to eliminate the leakage problem.
 
+ ![alt text][periodogram]
+
+[periodogram]: https://palatej.github.io/pages/stats/tests/seasonality/images/periodogram.png "Logo Title Text 1"
+
 ####  References
 
 Brockwell, P.J., and R.A. Davis (1991). Times Series: Theory and Methods. Springer Series in Statistics.
