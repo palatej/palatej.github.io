@@ -51,6 +51,11 @@ observations. Those critical values have been calculated given the recommended t
 and  $$r=112$$ for $$n \in [120,300]$$ . The $$F$$ approximation is less accurate for sample sizes larger than $$300$$.  For quarterly data,  $$r=44 $$, but there 
 are no recommendations regarding the required sample size
 
+![alt text][spectralResuts]
+
+[spectralResuts]: https://palatej.github.io/pages/stats/tests/seasonality/images/spectral.png "Logo Title Text 1"
+
+
 ####  References
 
 Tukey, J. (1949). The sampling theory of power spectrum estimates., Proceedings Symposium on Applications of Autocorrelation Analysis to Physical Problems, NAVEXOS-P-735, Office of Naval Research, Washington, 47-69
