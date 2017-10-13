@@ -34,9 +34,8 @@ Under the hypothesis of no seasonality, all months can be equally treated. For t
 For large $$ n $$ or $$ k $$ , i.e. n > 15 or k > 4, the probability distribution of $$ Q $$ can be approximated by that of 
 a chi-squared distribution. Thus, the p-value is given by $$ P( \chi^2_{k-1}>Q) $$ . 
 
-![alt text][friedman]
-
-[friedman]: https://palatej.github.io/pages/stats/tests/seasonality/images/friedman.png "Logo Title Text 1"
+Example of how results are displayed:
+![friedman](https://palatej.github.io/pages/stats/tests/seasonality/images/friedman.png)
 
 
 ####  Related tests

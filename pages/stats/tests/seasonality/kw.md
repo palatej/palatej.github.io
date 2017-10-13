@@ -38,9 +38,8 @@ Under the null hypothesis that all groups are generated from the same distributi
 Thus, the p-value is given by  $$ P( \chi^2_{g-1}>Q) $$. This approximation can be misleading if some of the groups are very small (i.e. less than five elements). If the statistic is not significant, then there is no evidence of stochastic dominance between the samples. 
 However, if the test is significant then at least one sample stochastically dominates another sample.   
 
-![alt text][kwResuts]
-
-[kwResuts]: https://palatej.github.io/pages/stats/tests/seasonality/images/kw.png "Logo Title Text 1"
+Example of how results are displayed:
+![kwResuts](https://palatej.github.io/pages/stats/tests/seasonality/images/kw.png)
 
 ####  References
 

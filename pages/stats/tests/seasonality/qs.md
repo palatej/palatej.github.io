@@ -18,8 +18,5 @@ The current implementation still considers that the statistics is distributed as
 $$\chi \left(k\right)$$
 even if it is obvioulsly incorrect.
 
-
-
-![alt text][qs]
-
-[qs]: https://palatej.github.io/pages/stats/tests/seasonality/images/qs.png "Logo Title Text 1"
+Example of how results are displayed:
+![qs](https://palatej.github.io/pages/stats/tests/seasonality/images/qs.png)
