@@ -11,9 +11,8 @@ order: 2000
 Here is how to access the Seasonality Tests in JDemetra+
 
 
-![alt text][AccessTests]
 
-[AccessTests]: https://palatej.github.io/pages/stats/tests/seasonality/images/seasonalTests.png "Logo Title Text 1"
+![](https://palatej.github.io/pages/stats/tests/seasonality/images/seasonalTests.png)
 
 The summary results provided in this example suggest that the series under consideration contains significant seasonal components. Some 
 of those tests rely on alternative estimates of the spectral decomposition of the data.  For  example, the periodogram, a smoother version of 
@@ -29,6 +28,8 @@ similar results.  The results of those tests can be complemented with the output
 
 The test results are displayed if you scroll down:
 
-![alt text][exampleSpain]
 
-[AccessTests]: https://palatej.github.io/pages/stats/tests/seasonality/images/exampleSpain.gif "Logo Title Text 2"
+![](https://palatej.github.io/pages/stats/tests/seasonality/images/example.gif)
+
+
+$$  $$

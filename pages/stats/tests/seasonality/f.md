@@ -43,11 +43,8 @@ $$
 where $$ n $$ is the sample size, $$ d $$ is the degree of differencing and $$ k $$ is the total number of regressors in the regARIMA model (including 11 seasonal
 dummies $$ M_{j,t} $$ and the intercept). This statistic follows a $$ F_{11,n-d-k} $$ distribution under the null.
 
-
-
-![alt text][Ftest]
-
-[Ftest]: https://palatej.github.io/pages/stats/tests/seasonality/images/f.png "Logo Title Text 1"
+Example of how results are displayed:
+![Ftest](https://palatej.github.io/pages/stats/tests/seasonality/images/f.png)
 
 
 ####  References
