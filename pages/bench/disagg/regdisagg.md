@@ -43,6 +43,12 @@ Different choices concerning the initial conditions will lead to different covar
 However, it should be noted that the Fernandez method with diffuse initialization and the Fernandez method with 0-initialization and mean correction are strictly equivalent.
 As for the initial residuals, the regression coefficients can be treated in two ways. They can be considered as fixed unknown or they can have an initial diffuse distribution. The likelihood functions based on those hypotheses will differ and lead to different ML estimates of the parameter of the model ($ρ$). It should be noted that the hypothesis on the coefficients of the regression has no direct impact on the MMSE estimates of the disaggregated series.
 
+Details on the likelihood function following the different hypotheses can be found in DK (2001) or in Franke (2010).
+An example of the impact of that hypothesis on the likelihood function is presented below.
+
+![OverviewTags](/assets/img/likelihood.png)
+
+
 ### State space forms
 
 Though direct matrix computation could be used, JD+ uses state space forms for estimating the usual temporal disaggregation models. They are described below (see also the generic state space form for temporal disaggregation and benchmarking).

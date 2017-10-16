@@ -28,7 +28,7 @@ The benchmarking SSF is the original SSF extended by the cumulator variable
 
 ### State vector
 
-The state is $\alpha_t=\begin{pmatrix}y_t^C & \tilde\alpha_t \end{pmatrix}$ 
+The state is $\alpha_t=\begin{pmatrix}y_t^{\underline C} \\ \tilde\alpha_t \end{pmatrix}$ 
 
 ### Initialization
 

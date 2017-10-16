@@ -10,7 +10,10 @@ order: 250
 
 #### Bibliography
 
+DE JONG P. (1991): "Stable Algorithms For the State Space Model", Journal of Time Series Analysis, 12, 2, 143-157.
+
 DE JONG P. AND CHU-CHUN-LIN S. (2003): "Smoothing with an Unknown Initial Condition", Journal of Time Series Analysis, 24, 2, 141-148.
+
 
 <hr>
 
