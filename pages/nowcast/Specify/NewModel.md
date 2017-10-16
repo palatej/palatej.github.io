@@ -49,9 +49,9 @@ In this example we have variables observed at the monthly and quarterly frequenc
 
 	![M](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/YoY.png)
  
--   Modeling expectations
+-   Modeling expectations ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html))
 
-	![M](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/YoY.png)
+	![X](https://palatej.github.io/pages/nowcast/Specify/images/X.png)
 
 	
 **The factor loading structure** can incorporate zero restrictions. Users should simply select which factors load on which variables. The following example helps to define a measurement equation for a very simple model for nowcasting German GDP:
