@@ -15,8 +15,7 @@ This part is not specific to the `Nowcasting plugin`. There are multiple ways to
 	- [HICP](https://open-data.europa.eu/en/data/dataset/eWEhQZ17tyHTWf7CdyHrA)
 	- [Tourism number of nights spent](https://open-data.europa.eu/en/data/dataset/vRkVEpAUZQg9sbvTIhfGA)
 	- [Volume of retail trade](https://open-data.europa.eu/en/data/dataset/7OJLyRVIeyVmhqbwtFdA)
-	
-This selection includes the variables that will be tracked in the [BDCOMP competition](http://fxdiebold.blogspot.be/2015/12/eurostat-forecasting-competition.html). 
+	This selection includes the variables that will be tracked in the [BDCOMP competition](http://fxdiebold.blogspot.be/2015/12/eurostat-forecasting-competition.html). 
 
 Go the the Providers Tab, which is placed by default in the left-hand side of the window:
 
