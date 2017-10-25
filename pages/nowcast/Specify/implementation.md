@@ -8,4 +8,15 @@ order: 35
 ---
 # {{page.description}}
 
+## State-Space systems with object oriented (OO) modeling
+Differences with respect to alternative set-ups built in Matlab, SAS and OX
+
+## The case of dynamic factor models: 
+
+### Design of alternative measurement equations for each variable
+
+### Transition equations in the OO set-up 
+
+
+
 
