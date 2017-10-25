@@ -33,13 +33,25 @@ $$ T_t =\begin{pmatrix} \tilde T_t & 0 \\ 0 & I\end{pmatrix}  $$
 
 Fixed (case 1) or variable (case 2) coefficients are defined by means of the innovations of the transition equation 
 
-$$ V_t= \begin{cases}\begin{pmatrix} \tilde V_t & 0 \\ 0 & 0\end{pmatrix} \\ \begin{pmatrix} \tilde V_t & 0 \\ 0 & \Gamma_t\end{pmatrix}\end{cases}$$
+$$ V_t= \begin{cases}\begin{pmatrix} \tilde V_t & 0 \\ 0 & 0\end{pmatrix} \\ \begin{pmatrix} \tilde V_t & 0 \\ 0 & \Omega_t\end{pmatrix}\end{cases}$$
 
-<br>
-
-$$ S_t= \begin{cases}\begin{pmatrix} \tilde S_t & 0 \\ 0 & 0\end{pmatrix} \\ \begin{pmatrix} \tilde S_t & 0 \\ 0 & _t\end{pmatrix}\end{cases}$$
+$$ S_t= \begin{cases}\begin{pmatrix} \tilde S_t & 0 \\ 0 & 0\end{pmatrix} \\ \begin{pmatrix} \tilde S_t & 0 \\ 0 & \Gamma_t\end{pmatrix}\end{cases}$$
 
 ### Measurement
 
-$$ Z_t = \begin{cases} \begin{pmatrix} 0 & \tilde Z_t \end{pmatrix} if \; t \mod c = 0 \\ \begin{pmatrix} 1 & \tilde Z_t \end{pmatrix} if \; t \mod c \neq 0\end{cases}$$
+$$ Z_t = \begin{pmatrix}  \tilde Z_t & X_{1t} & \cdots && X_{kt}\end{pmatrix}$$
 
+
+## Example: time varying trading days
+
+The key point in defining time varying coefficients is the specification of the covariance matrix in the transition equation.
+
+Experience shows that parsimonious specifications should be preferred.
+
+As with fixed coefficients, we impose that the sum of the coefficients of all days is 0 for each period.
+
+This is achieve by defining the covariance matrix by
+
+$$ \Omega_{i,j} $$
+
+We can model trading days in different ways. We will consider below two solutions: the variables may be defined by the number of days in each period, corrected for their seasonal mean effect or their can defined using "contrasts" (differences between the number of days in the period and the number of "contrasting" days - usually Sundays). 

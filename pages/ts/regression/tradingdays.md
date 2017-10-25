@@ -89,7 +89,17 @@ Contrasts are defined as the (weighted) differences between the number of days i
 *  TD3: #Week days – 5 * #Sundays, #Saturdays - #Sundays
 *  TD2: #Week days – 5/2 * (#Saturdays + #Sundays)
 
-In the standard case, the weights of the contrasts, based on the number of days in each group, eliminate the mean and seasonal effects.  However, this is no longer the case when we consider specific holidays.  
+In the standard case, the weights of the contrasts, based on the number of days in each group, eliminate the mean and seasonal effects.  However, this is no longer the case when we consider specific holidays.
+
+The use of contrasts in regression models leads to several drawbacks.
+
+For instance, in the case of TD7, we have:
+
+$$ c_1 \left( \# Mon - \# Sun \right) + \cdots  c_6 \left( \# Sat - \# Sun \right)  $$
+
+$$ = c_1 \# Mon + \cdots + c_6 \# Sat - \left( c_1 + \cdots + c_6 \right) \# Sun  $$
+
+So, the coefficient related to the Sundays is the opposite of the sum of the other coefficients, so that the sum of all coefficients is 0.
 
 #### Handling of specific holidays
 
