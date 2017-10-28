@@ -24,7 +24,7 @@ $$ v_t = y_t - Z_t a_t $$
 
 if $F_{\infty t}=0$
 
-$$ a_{t+1} = T_t a_t + v_t F_{* t}^{-1} C_{* t} $$
+$$ a_{t+1} = T_t a_t + C_{* t}  F_{* t}^{-1} v_t$$
 
 $$ P_{\infty t+1} = T_t P_{\infty t} T_t'$$
 
@@ -34,9 +34,9 @@ if $F_{\infty t}$ is invertible
 
 $$ a_{t+1} = T_t a_t + v_t F_{\infty t}^{-1} C_{\infty t} $$
 
-$$ P_{\infty t+1} = T_t P_{* t} T_t' - C_{\infty t} F_{\infty t}^{-1}  C_{\infty t}'$$
+$$ P_{\infty t+1} = T_t P_{\infty t} T_t' - C_{\infty t} F_{\infty t}^{-1}  C_{\infty t}'$$
 
-$$ P_{* t+1} = T_t P_{\infty t} T_t' - C_{\infty t} F_{\infty t}^{-1} F_{*t} F_{\infty t}^{-1} C_{\infty t}' - < C_{* t} F_{\infty t}^{-1} C_{\infty t}'> + V_t$$
+$$ P_{* t+1} = T_t P_{* t} T_t' - C_{\infty t} F_{\infty t}^{-1} F_{*t} F_{\infty t}^{-1} C_{\infty t}' - < C_{* t} F_{\infty t}^{-1} C_{\infty t}'> + V_t$$
 
 where $\lt A \gt$ stands for $A+A'$
 
@@ -52,15 +52,15 @@ $$ F_{*t} = Z_t P_{*t} Z_T' $$
 
 $$ C_{*t} = T_t P_{*t} Z_T' $$
 
-$$ F_{\infty t} = \left(Z_t B_t \right) \left(Z_t B_t \right)' $$
+$$ F_{\infty t} = \left(Z_t B_t \right) \left(Z_t B_t \right)' = X_t X_t'$$
 
-$$ C_{\infty t} = \left(T_t B_t \right) \left(Z_t B_t \right)' $$
+$$ C_{\infty t} = \left(T_t B_t \right) \left(Z_t B_t \right)' = Y_t X_t'$$
 
 $$ v_t = y_t - Z_t a_t $$
 
 if $Z_t B_t=0$
 
-$$ a_{t+1} = T_t a_t + v_t F_{* t}^{-1} C_{* t} $$
+$$ a_{t+1} = T_t a_t +  C_{* t} F_{* t}^{-1} v_t$$
 
 $$ B_{t+1} = T_t B_t$$
 
@@ -71,9 +71,9 @@ if $Z_t B_t \neq 0$
 
 $$ a_{t+1} = T_t a_t + v_t F_{\infty t}^{-1} C_{\infty t} $$
 
-$$ P_{\infty t+1} = T_t P_{* t} T_t' - C_{\infty t} F_{\infty t}^{-1}  C_{\infty t}'$$
+$$ P_{\infty t+1} = \left(T_t B_t \right)\left(T_t B_t \right)' - C_{\infty t} F_{\infty t}^{-1}  C_{\infty t}'$$
 
-$$ P_{* t+1} = T_t P_{\infty t} T_t' - C_{\infty t} F_{\infty t}^{-1} F_{*t} F_{\infty t}^{-1} C_{\infty t}' - < C_{* t} F_{\infty t}^{-1} C_{\infty t}'> + V_t$$
+$$ P_{* t+1} = T_t P_{* t} T_t' - C_{\infty t} F_{\infty t}^{-1} F_{*t} F_{\infty t}^{-1} C_{\infty t}' - < C_{* t} F_{\infty t}^{-1} C_{\infty t}'> + V_t$$
 
 $B_{t+1}$ is computed as follows:
 
