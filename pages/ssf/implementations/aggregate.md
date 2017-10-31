@@ -8,7 +8,27 @@ order: 1050
 ---
 {{page.description}}
 
+#### Introduction
 
+We consider the aggregation of $n$ state space models such that the innovations of the transition equations are independent. Moreover, we suppose that at most one of the models (by convention, the first one) has measurement errors.  
+#### State vector
+
+The state vector is defined as the stack of the state vectors of the different models
+
+$$ \alpha_t = \begin{pmatrix} \alpha_{1t} \\ \vdots \\ \alpha_{nt} \end{pmatrix}$$
+
+#### Dynamics and initialization
+
+$$ T_t = \begin{pmatrix} T_{1t} & 0 & \cdots & 0 
+\\ 0 & T_{2t} & 0 & \vdots \\ \vdots & \ddots & \ddots & \vdots\\ 0 & \cdots & 0 & T_{nt} \end{pmatrix} $$
+
+The other matrices of the transition equation and of the initialization are defined in a similar way.
+
+#### Measurement
+
+$$ Z_t = \begin{pmatrix} Z_{1t} & \cdots & Z_{nt} \end{pmatrix} $$
+
+$$ H_t = H_{1t} $$ 
 
 <hr>
 
