@@ -18,13 +18,13 @@ For a periodicity of $s$, we define the state space form of the seasonal compone
 
 We consider first the state vector $\tilde \gamma_t$ such that $\tilde \gamma_{it}$ is the (unobserved) seasonal component of season $i$ observed at time $t$.
 
-Using that definition would imply a time varying measurement error. To avoid it, we use the state vector $\gamma_t$ which is a rotation of $\tilde \gamma_t$ such that the first component corresponds to the current period. More precisely, $\gamma_{it} =\tilde\gamma_{1+\left( \left(t-i\right) \mod s \right), t}$.
+Using that definition would imply a time varying measurement error. To avoid it, we use the state vector $\gamma_t$ which is a rotation of $\tilde \gamma_t$ such that the first component corresponds to the current period. More precisely, $\gamma_{it} =\tilde\gamma_{\left( \left(t-i\right) \mod s \right), t}$.
 
 Moreover, the constraint that the sum of the latent variables is 0 allows us to consider only $s-1$ periods (the missing one being the opposite of the sum of all the other periods).
 
 #### Dynamics
 
-$$ T_t = \begin{pmatrix} -1 & -1 & \cdots & -1 \\ 1 & 0 & \cdots & 0 \\ 0 & \ddots & \ddots & \vdots \\ \cdots &  \cdots & 1 & 0\end{pmatrix}$$
+$$ T_t = \begin{pmatrix} 0 & 1 & \cdots & 0 \\ \vdots & \ddots & \ddots & \vdots \\ 0 &  \cdots & 0 & 1  \\ -1 & -1 & \cdots & -1\end{pmatrix}$$
 
 The 
 

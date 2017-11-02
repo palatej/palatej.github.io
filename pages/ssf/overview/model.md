@@ -10,7 +10,7 @@ order: 0
 
 The `general linear gaussian` state-space model can be written in many different ways. The form considered in JD+ 3.0 is presented below.
 
-$$ y_t = Z_t \alpha_t + \epsilon_t,\quad \epsilon_t \sim N\left(0, \sigma^2 H_t\right),\quad t \gt 0 $$
+$$ y_t = Z_t \alpha_t + \epsilon_t,\quad \epsilon_t \sim N\left(0, \sigma^2 H_t\right),\quad t \ge 0 $$
 
 $$ \alpha_{t+1} = T_t \alpha_t + \mu_t, \quad \mu_t \sim N \left(0, \sigma^2 V_t \right),\quad t \ge 0 $$
 
