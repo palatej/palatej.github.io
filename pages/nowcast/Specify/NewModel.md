@@ -41,17 +41,25 @@ In this example we have variables observed at the monthly and quarterly frequenc
 	![M](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/M.png) 
 	
  
--   Monthly or quarterly variables that are correlated with the the underlying quarterly growth rate of the economy can be linked to a weighted average _of the factors representing the underlying monthly growth rate of the economy_. Such a weighted average is meant to represent quarterly growth rates, and it is implemented by selecting "Q":
+-   Monthly or quarterly variables that are correlated with the the underlying quarterly growth rate of the economy can be linked to a weighted average _of the factors representing the underlying monthly growth rate of the economy_. Such a weighted average is meant to approximate quarterly growth rates, and it is implemented by selecting "Q" ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html)):
 
 	![M](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/Q.png)
  
--   The variables can also be linked to the cumulative sum of the last 12 monthly factors. If the model is designed in such a way that the monthly factors represent monthly growth rates, the resulting cumulative sum boils down to the year-on-year growth rate. Thus, variables expressed in terms of year-on-year growth rates or surveys that are correlated with the year-on-year growth rates of the reference series should be linked to the factors using this link:
+-   Variables representing yearly growth rates are linked to a moving average of the factors that represent the underlying monthly growth rate of the economy_. Such a weighted average is meant to approximate the growth rate of a year, and it is implemented by selecting "Y" ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html)):
+
+    ![X](https://palatej.github.io/pages/nowcast/Specify/images/Y.png)
+	
+-   The variables can also be linked to the cumulative sum of the last 12 monthly factors. If the model is designed in such a way that the monthly factors represent monthly growth rates, the resulting cumulative sum boils down to the year-on-year growth rate. Thus, variables expressed in terms of year-on-year growth rates or surveys that are correlated with the year-on-year growth rates of the reference series should be linked to the factors using this link ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html)):
 
 	![M](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/YoY.png)
  
--   Modeling expectations ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html))
+-   Variables representing **expected changes over a forecast horizon** ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html))
 
 	![X](https://palatej.github.io/pages/nowcast/Specify/images/X.png)
+
+-   Variables represening **forecasts for a precise horizon** ([see econometric model](https://palatej.github.io/pages/nowcast/Specify/econometric.html))
+
+	![X](https://palatej.github.io/pages/nowcast/Specify/images/Sh.png)
 
 	
 **The factor loading structure** can incorporate zero restrictions. Users should simply select which factors load on which variables. The following example helps to define a measurement equation for a very simple model for nowcasting German GDP:
