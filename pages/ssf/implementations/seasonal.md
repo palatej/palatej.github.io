@@ -26,7 +26,16 @@ Moreover, the constraint that the sum of the latent variables is 0 allows us to 
 
 $$ T_t = \begin{pmatrix} 0 & 1 & \cdots & 0 \\ \vdots & \ddots & \ddots & \vdots \\ 0 &  \cdots & 0 & 1  \\ -1 & -1 & \cdots & -1\end{pmatrix}$$
 
-The 
+The covariance matrix of the innovations cantake different form. Using the terminology of Proietti, we consider:
+
+|Model| V | S |
+| - | - | - |
+|Dummy|$\begin{pmatrix} 0 &  \cdots & 0 \\ \vdots & & \vdots\\ 0 &\cdots &\sigma_{seas}^2\end{pmatrix}$ |$\begin{pmatrix}0 \\ \vdots \\ \sigma_{seas}\end{pmatrix}$|
+|Crude|$\sigma_{seas}^2\begin{pmatrix} 1 &  \cdots & 1 \\ \vdots & & \vdots\\ 1 &\cdots & 1\end{pmatrix}$ |$\sigma_{seas}\begin{pmatrix}1 \\ \vdots \\ 1\end{pmatrix}$|
+|HarrisonStevens| |
+|Trigonometric| |
+
+
 
 #### Measurement
 
