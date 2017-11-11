@@ -90,19 +90,19 @@ obtain  $$  \tiny f^{Y}_{t}=\frac{1}{12} f_{t} + \frac{2}{12}f_{t-1}  +\frac{3}{
 **The link between the time series and the factors** can be more sophisticated. Appart from the two options mentioned above, the measurement equation 
 for some variables  (typically survey data)  may require an additional effort. 
 
-- Variables such as the euro area economic sentiment indicator produced by the European Comission, which are
-correlated with the year-on-year growth rate of GDP. Those variables may be linked to the cumulative sum of the last 12 monthly factors. If 
+- Surveys such as the euro area economic sentiment indicator produced by the European Comission, which are
+**correlated with the year-on-year growth rate** of GDP. Those variables may be linked to the cumulative sum of the last 12 monthly factors. If 
 the model is designed in such a way that the monthly factors represent monthly growth rates, the resulting cumulative sum boils down to 
 the year-on-year growth rate. Thus, variables expressed in terms of year-on-year growth rates or surveys that are correlated with the 
 year-on-year growth rates of the reference series should be linked to the factors using this link:
 
 	![Y](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/YoY.png)
 
-- Variables representing expectations or forecasts with a precise horizon may be added to the measurement equation in a model-consistent way. For example, 
+-  **Variables representing expected changes over a precise horizon** may be added to the measurement equation in a model-consistent way. For example, 
 think of a quantitative or qualitative survey $$ S_t $$ where respondents have been asked to report how much they expect prices to change over the 
 next three months. That is, $$  S_{t}=P_{t+h | t}-P_{t} $$, where $$ P_{t+h | t} $$ stands for the price level expected three months ahead 
-when $$ h=3 $$. Variables that contains expectations about the future are likely to be informative about the current state of the economy,  
-$$ f_t$$, so in principle they could be linked to the factors in the usual way:
+when $$ h=3 $$. Variables that contains expectations about the future are likely to be informative about the current state of the economy, $$ f_t $$, so in 
+principle they could be linked to the factors in the usual way:
 $$
 \begin{eqnarray}
 S_{t} &=& \Lambda_{s} f_{t}  + \psi^{s}_{t} 
@@ -122,44 +122,54 @@ the factor that enters the more sophisticated measurement equation (\ref{modelCo
 
 	![X](https://palatej.github.io/pages/nowcast/Specify/images/X.png)
 
-- Modeling quarterly growth forecasts for a given quarter in the future. GDP forecasts of others can also be modeled in a model consistent way. You 
+- **Variables represening forecasts for a given horizon**. The solution is independent on the frequency of the variable and what it represents. In practice
+it is equivalent to *shifting* the time series forward by  $$ h $$ periods. For example, 
+one can model quarterly growth expectations produced by profesional forecasters for a given quarter in the future. You 
 may think it is a good idea to simply introduce quantitative surveys representing GDP growth forecasts exactly as you would do with the remaining
-indicators. However, you may want to achieve efficiency gains by making those forecasts consistent with your model. The presence of a measurement error 
-provides some insurance agains model misspecification. How to do it? A GDP growth forecast for, say $$ h $$ quarters ahead is represented as $$ GDP_{t+h\times 3|t}$$
+indicators. However, you may want to achieve efficiency gains by making those forecasts consistent with your model. How to do it? A GDP growth forecast for, say $$ h $$ quarters ahead is represented as $$ GDP_{t+h\times 3|t}$$
 because $$t$$ refers to the montly frequency and a quarter has 3 months. This is introduced in a model as follows:
 $$
 \begin{eqnarray}
 GDP_{t+h \times 3|t} &=& \Lambda_{GDP} f^{Q}_{t+h\times 3 | t}  + \psi^{Q}_{t+ h \times 3} \nonumber \\
-GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}A^{h \times 3} +\frac{2}{3}A^{h \times 3-1}  + A^{h \times 3-2}  +\frac{2}{3} A^{h \times 3-3}  +\frac{1}{3}A^{h \times 3-3}) f_{t}  + \psi^{Q}_{t+h \times 3} \nonumber \\
-GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}A^{h \times 3}f_{t} +\frac{2}{3}A^{h \times 3-1} f_{t} + A^{h \times 3-2}f_{t} +\frac{2}{3} A^{h \times 3-3} f_{t } +\frac{1}{3}A^{h \times 3-3} f_{t+h \times 3-4} )  + \psi^{Q}_{t+h \times 3}  \nonumber \\
 GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}f_{t+h \times 3| t} +\frac{2}{3}f_{t+h \times 3-1 | t} + f_{t+h \times 3-2 | t} +\frac{2}{3}f_{t+h \times 3-3 | t} +\frac{1}{3}f_{t+h \times 3-4| t} )  + \psi^{Q}_{t+h \times 3} 
 \label{modelConsistentQ}
 \end{eqnarray}
 $$
-In this case, Equation (\ref{modelConsistentQ}) has a more complex loading structure than equations (\ref{naive}) and  (\ref{modelConsistentM}). As before, it is obtained, without loss of generality, by assuming that the factors follow a 
-VAR(1), i.e. $$ f_{t}=A f_{t-1} + u_{t} $$, so that $$ f_{t+h| t} = A^{h} f_{t} $$. 
-The icon you need to select to implement this idea	is different than the previous one. After using the "Q" icon to to link quarterly growth rates with the moving average of the factors,
-we need to tell the sofware we are dealing with a forcast using the following icon:
+If 	$$h=0$$, we are back to the case where we simply model the quarterly growth rate of a variable, which uses a moving average of the factors $$f_t$$, $$\ldots$$, $$f_{t-4}$$. If instead we want to model
+one quarter ahead forecasts of GPD, i.e. $$h=1$$, then equation (\ref{modelConsistentQ}) is shifting the time indices 3 months ahead. This is implemented by using
 
 	![X](https://palatej.github.io/pages/nowcast/Specify/images/Sh.png)
-
-- Modeling yearly growth forecasts at for given year in the future. The procedure is equivalent to the one followed in the previous point. After using the "Y" icon to to link quarterly growth rates with the moving average of the factors,
-we need to tell the sofware we are dealing with a forcast using the following icon, where $$h$$	may be set to 12 if our variable represents a forecast for the previous year:
-
-	![X](https://palatej.github.io/pages/nowcast/Specify/images/Sh.png)
-
-	
-- Modeling expectations regarding cummulative growth over $$h$$ quarters. Instead of using icon Shift(h), you will select the icon $$X(h)$$, where $$h=12$$ for instance. In this case, you will be modeling the expected 
-growth rate over the next 4 quarters (12 months, since the base frequency in our current set up is monthly):
+In this case, equation (\ref{modelConsistentQ}) does not need so many lags of the factors, but only $$f_t$$ and  $$f_{t-1}$$:
 $$
 \begin{eqnarray}
-GDP_{t+1 \times 3|t}+GDP_{t+2 \times 3|t}+GDP_{t+3 \times 3|t}+GDP_{t+4 \times 3|t} &=& \Lambda_{GDP} (f^{Q}_{t+1\times 3 | t}+f^{Q}_{t+2\times 3 | t}+f^{Q}_{t+3\times 3 | t}+f^{Q}_{t+h\times 3 | t})  + \psi^{Q}_{t+ h \times 3} \nonumber \\
-\label{modelConsistentY}
+GDP_{t+h \times 3|t} &=& \Lambda_{GDP} f^{Q}_{t+h\times 3 | t}  + \psi^{Q}_{t+ h \times 3} \nonumber \\
+GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}f_{t+h \times 3| t} +\frac{2}{3}f_{t+h \times 3-1 | t} + f_{t+h \times 3-2 | t} +\frac{2}{3}f_{t+h \times 3-3 | t} +\frac{1}{3}f_{t+h \times 3-4| t} )  + \psi^{Q}_{t+h \times 3} \nonumber \\
+GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}A^{h \times 3}f_{t} +\frac{2}{3}A^{h \times 3-1} f_{t} + A^{h \times 3-2}f_{t} +\frac{2}{3} f_{t } + \frac{1}{3} f_{t-1} )  + \psi^{Q}_{t+h \times 3}  \nonumber \\
+GDP_{t+h \times 3|t} &=& \Lambda_{GDP} (\frac{1}{3}A^{h \times 3} +\frac{2}{3}A^{h \times 3-1}  + A^{h \times 3-2}  +\frac{2}{3} A^{h \times 3-3}) f_{t}  + \Lambda_{GDP} \frac{1}{3}f_{t-1} +\psi^{Q}_{t+h \times 3}
+\label{modelConsistentQ2}
 \end{eqnarray}
 $$
-which is different from GDP growth expected for the last quarter of the year, i.e. Shift(h) with $$h=12$$ and also different from yearly growth rates that are typically reported (they compare the GDP flow of a year with that of the 
-previous year), so be careful with this. This exapression can be expanded by replacing $$ f^{Q}_{t+h| t}$$ by the corresponding weighted average, and of course,
-by dividing both sides of this expressioin by 4, we get the average growth rate for all quarters of the year. 
+This has a more complex loading structure than equations (\ref{naive}) and  (\ref{modelConsistentM}). As before, it is obtained, without loss of generality, by assuming that the factors follow a 
+VAR(1), i.e. $$ f_{t}=A f_{t-1} + u_{t} $$, so that $$ f_{t+h| t} = A^{h} f_{t} $$. 
+The icon you need to select to implement this idea	is different than the previous one. After using the `Q` icon to to link quarterly growth rates with the moving average of the factors,
+we need to tell the sofware we are dealing with a forcast using the `Shift(h)` icon.
+ 
+- Further options. Once the difference between `Shift(h)` and `X(h)` has been understood, they can be used in combination with `Q`, `Y` or `YoY` in order to exploit alternative modeling options:
+
+	- **Modeling yearly growth forecasts for given year in the future**. The procedure is equivalent to the one followed in the previous point. After using the `Y` icon to link yearly growth rates with the moving average of the monthly factors,
+	we need to tell the sofware we are dealing with a forcast using the `Shift(h)`, where $$h$$	may be set to 1 if our variable, which has annual frequency, represents a forecast for the next year.
+	
+	- **Modeling expectations regarding cummulative growth over $$h$$ quarters**. Instead of using icon `Shift(h)`, you will select the icon `X(h)`, where $$h=4$$ quarters for instance. In this case, you will be modeling the expected 
+	growth rate over the next 4 quarters (12 months, since the base frequency in our current set up is monthly):
+	$$
+	\begin{eqnarray}
+	GDP_{t+1 \times 3|t}+GDP_{t+2 \times 3|t}+GDP_{t+3 \times 3|t}+GDP_{t+4 \times 3|t} &=& \Lambda_{GDP} (f^{Q}_{t+1\times 3 | t}+f^{Q}_{t+2\times 3 | t}+f^{Q}_{t+3\times 3 | t}+f^{Q}_{t+h\times 3 | t})  + \psi^{Q}_{t+ h \times 3} \nonumber \\
+	\label{modelConsistentY}
+	\end{eqnarray}
+	$$
+	which is different from GDP growth expected for the last quarter of the year, i.e. `Shift(h)` with $$h=4$$ and also different from yearly growth rates that are typically reported (they compare the GDP flow of a year with that of the 
+	previous year), so be careful with this. This expression can be expanded by replacing $$ f^{Q}_{t+h| t}$$ by the corresponding weighted average, and of course,
+	by dividing both sides of this expressioin by 4, we get the average growth rate for all quarters of the year. 
 
  
 
