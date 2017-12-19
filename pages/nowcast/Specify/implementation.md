@@ -11,8 +11,8 @@ order: 35
 ## State-Space systems with object oriented (OO) modeling
 Differences with respect to alternative set-ups built in Matlab, SAS and OX
 
-	![SSF](https://palatej.github.io/pages/nowcast/Specify/images/SSF.png)
-	
+[SSF](https://palatej.github.io/pages/nowcast/Specify/images/SSF.png)
+ 	
 ## The case of dynamic factor models: 
 
 ### Design of alternative measurement equations for each variable
