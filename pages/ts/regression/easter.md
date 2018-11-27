@@ -15,6 +15,7 @@ For instance, using a duration of 10 and considering that the end day is Easter 
 
 {: .table .table-bordered .table-striped}
 | Year | Easter | #Days in March | #Days in April | Effect in March (not corrected) | Effect in April (not corrected) | March (Tramo) | April (Tramo) |
+|-|-|-|-|-|-|-|-|
 |2014|5 April|5|5|0.5|0.5|0|0|
 |2015|27 March|10|0|1|0|0.5|-0.5|
 |2017|16 April|0|10|0|1|-0.5|0.5|

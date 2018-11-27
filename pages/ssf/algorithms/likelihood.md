@@ -15,7 +15,7 @@ When the initial state of the model is completely specified (no diffuse elements
 
 $$ p(y_1, \ldots, y_n) = p(y_1) p(y_2\vert y_1) \ldots p(y_n\vert y_1 \ldots, y_{n-1})$$  
 
-So, by concentrating the scaling factor $\sigma^2$ out of the likelihood, we get, using the notations defined for the [ordinary filter](./ordinaryfilter.md):
+So, by concentrating the scaling factor $\sigma^2$ out of the likelihood, we get, using the notations defined for the [ordinary filter](./ordinaryfilter.html):
 
 univariate case:
 
@@ -31,12 +31,18 @@ $$=-1/2\left(n \log(2 \pi) + n  - n\log n + n \log \sum_{i=1}^n u_i' u_i + 2\sum
 
 ### Diffuse models
 
-We define the diffuse likelihood as 
+
+When the covariance matrix of the process is defined up to the scaling factor $\sigma^2$, we define the diffuse likelihood as 
 
 $$l(y\vert \theta, \sigma^2) = \lim_{k \rightarrow \infty} \left(l(y \vert k, \theta,\sigma^2)  (2 \pi \sigma^2 k)^{d/2}\right)$$
 
 This is similar to Francke et al.(2010), (equation 14).
 Apart from the scaling factor, it also identical to the approach of Ansley and Kohn (1985) (theorem 5.1). 
+
+Otherwise, we use the usual definition:
+
+$$l(y\vert \theta) = \lim_{k \rightarrow \infty} \left(l(y \vert k, \theta)  (2 \pi  k)^{d/2}\right)$$
+
 
 #### Durbin-Koopman approach
 

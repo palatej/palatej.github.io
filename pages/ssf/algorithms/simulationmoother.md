@@ -1,6 +1,6 @@
 ---
 layout: left-menu
-title: Disturbance smoother
+title: Simulation smoother
 tagline: JD+. State space models
 description: Simulation smoother
 category: "Others"

@@ -160,10 +160,12 @@ Another approach consists in deriving a raw theoretical distribution based on th
 "Easter is the first Sunday after the full moon (the Paschal Full Moon) following the northern hemisphere's vernal equinox. Ecclesiastically, the equinox is reckoned to be on 21 March (even though the equinox occurs, astronomically speaking, on 20 March in most years), and the "Full Moon" is not necessarily the astronomically correct date. Easter is delayed by 1 week if the full moon is on Sunday. The date of Easter therefore varies between 22 March and 25 April" (Wikipedia). Taking into account that an average lunar month is 29.53059 days, we can derive raw formulae for the approximated distribution of Easter (they don't take into account the actual ecclesiastical moon calendar).
 
 {: .table .table-bordered .table-striped}
+|date|probability|
+|-|-|
 |22/3|1/7 * 1/29.53059|
 |23/3|1/7 * 2/29.53059|
 |24/3|1/7 * 3/29.53059|
-125/3|1/7 * 4/29.53059|
+|25/3|1/7 * 4/29.53059|
 |26/3|1/7 * 5/29.53059|
 |27/3|1/7 * 6/29.53059|
 |28/3|1/29.53059|

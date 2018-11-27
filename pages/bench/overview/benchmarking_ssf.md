@@ -11,14 +11,11 @@ order: 10
 
 We write
 
-$$y_t^{\underline{C}}=\sum_{k=t-t\mod{c}}^{t-1}{y_k}$$
+$$y^C_t=\sum_{k=t-t \textsf{ mod }c}^t{y_k}$$
 
-It represents the cumulator variable, from the beginning of each benchmarking period (included) to the current period (excluded).
-and 
+It represents the cumulator variable, from the beginning of each benchmarking period to the current period (included).
 
-$$y_t^{C}=\sum_{k=t-t\mod{c}}^t{y_k} = y_t^{\underline{C}}+y_t $$
-
-So that $y_t^C=\mathbf{y}_{t/c}$  when $t+1$ is a multiple of $c$ and is unobserved otherwise.
+So, $y^C_t=\mathbf{y}_{t/c}$  when $t+1$ is a multiple of $c$ and is unobserved otherwise.
 
 
 We consider that the unobserved disaggregated series has a state space form (SSF) identified by the state $\tilde\alpha_t$ and the system matrices $\left[ \tilde Z_t,\tilde H_t,\tilde T_t,\tilde V_t, \tilde S_t, \tilde a_{-1}, \tilde P_*,\tilde B,\tilde P_\infty \right]$ (see [Ssf model](../model.md) ).
@@ -48,7 +45,7 @@ $$ P_\infty= \begin{pmatrix} 0 & 0 \\ 0 &\tilde P_\infty\end{pmatrix} $$
 
 ### Dynamics
 
-$$ T_t =\begin{cases}  \begin{pmatrix} 0 & 0 \\ 0 &\tilde T_t\end{pmatrix} if\; {t+1} \mod c = 0 \\\begin{pmatrix} 0 & \tilde Z_t \\ 0 &\tilde T_t\end{pmatrix} if\; t \mod c = 0 \\\begin{pmatrix} 1 & \tilde Z_t \\ 0 &\tilde T_t\end{pmatrix}  otherwise \end{cases} $$
+$$ T_t =\begin{cases}  \begin{pmatrix} 0 & 0 \\ 0 &\tilde T_t\end{pmatrix} & if\; {t+1} \textsf{ mod } c = 0 \\\begin{pmatrix} 0 & \tilde Z_t \\ 0 &\tilde T_t\end{pmatrix} & if\; t \textsf{ mod } c = 0 \\\begin{pmatrix} 1 & \tilde Z_t \\ 0 &\tilde T_t\end{pmatrix} &  otherwise \end{cases} $$
 
 <br>
 
@@ -61,7 +58,7 @@ $$ S_t = \begin{pmatrix} 0 \\ \tilde S_t\end{pmatrix}$$
 
 ### Measurement
 
-$$ Z_t = \begin{cases} \begin{pmatrix} 0 & \tilde Z_t \end{pmatrix} if \; t \mod c = 0 \\ \begin{pmatrix} 1 & \tilde Z_t \end{pmatrix} if \; t \mod c \neq 0\end{cases}$$
+$$ Z_t = \begin{cases} \begin{pmatrix} 0 & \tilde Z_t \end{pmatrix} & if \; t \textsf{ mod } c = 0 \\ \begin{pmatrix} 1 & \tilde Z_t \end{pmatrix} & if \; t \textsf{ mod } c \neq 0\end{cases}$$
 
 
 ### Regression model

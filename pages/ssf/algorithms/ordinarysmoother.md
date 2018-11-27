@@ -11,7 +11,7 @@ order: 100
 
 #### Notations
 
-$a_t, P_t, C_t \left(=P_t Z_t' \right), f_t, e_t$ are quantities obtained in the [filtering process](./ordinaryfilter.md). $r_t, r_{0t}, r_{1t}$ are auxiliary row-matrices, while $N_t,N_{0t},N_{1t}, N_{2t}$
+$a_t, P_t, C_t \left(=P_t Z_t' \right), f_t, e_t$ are quantities obtained in the [filtering process](./ordinaryfilter.html). $r_t, r_{0t}, r_{1t}$ are auxiliary row-matrices, while $N_t,N_{0t},N_{1t}, N_{2t}$
 are auxiliary square matrices.
 Except $r_{0t},N_{0t}$ which are initialised with the last values of $r_t,N_t$, those objects are set to 0 at the beginning of the process.
 
@@ -32,7 +32,7 @@ $$ K_t = T_t C_t / f_t $$
 
 $$ \tilde e_t = v_t / f_t - r_t K_t  $$  
 
-$$ \left[var \tilde e_t = 1/f_t + K_t' N_t K_t \right]$$  
+$$ \left[\text{var }\tilde e_t = 1/f_t + K_t' N_t K_t \right]$$  
 
 $$ r_{t-1} = \tilde e_t Z_t + r_t T_t $$  
 

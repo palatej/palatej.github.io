@@ -48,18 +48,25 @@ or
 
 $$ l_c \left( \theta | y \right ) = - \frac{n}{2} \left(\log{2 \pi}+ 1 - \log {n} + \log{e'e} + \log{|\Omega |^\frac{1}{n}}\right) $$
 
-Maximizing $ l_c $ is equivalent to minimizing the deviance 
+Maximizing $l_c$ is equivalent to minimizing the deviance 
 
 $$ d \left( y | \theta\right ) = e'e |\Omega |^\frac{1}{n} = v'v, \quad where \quad v = \sqrt{ |\Omega |^\frac{1}{n} }\: e$$ 
 
 This last formulation will be used in optimization procedures based on sums of squares (Levenberg-Marquardt and similar algorithms).
 
+The maximization of the likelihood without scaling factor is equivalent to the minimization of 
+
+ $$ u'u +\log{|\Sigma |} $$
+ 
+
 #### Linear model with gaussian noises
 
 The likelihood is often computed on a linear model
+
 $$ y=X\beta + \mu \quad \mu \sim N\left(0, \sigma^2\Omega\right) $$
 
 The log-likelihood is then
+
 $$ l \left(\theta,\beta , \sigma | y \right ) = - \frac{1}{2} \left(n \log{2 \pi}+ n \log {\sigma^2} + \log{|\Omega |} + \frac{1}{\sigma ^2} \left(y-X\beta \right)'\Omega^{-1}\left(y-X\beta \right) \right) $$
 
 The maximum likelihood estimator of $\beta$ is
@@ -67,10 +74,30 @@ The maximum likelihood estimator of $\beta$ is
 $$ \hat{\beta} = \left( X'\Omega^{-1}X\right)^{-1}X'\Omega^{-1}y $$
 
 which is normally distributed with variance
+
 $$ \sigma^2 \left( X'\Omega^{-1}X\right)^{-1} $$
 
 The formulae of the likelihood are still valid, using
+
 $$ e=L^{-1} \left(y-X\hat\beta \right) $$
+
+#### Statistics derived from the likelihood
+
+We suppose that the distribution depends on $p$ parameters, that we have $n$ observations (excluding missing values) and that $l$ is the log-likelihood. We use in JD+ the following statistics
+
+$$ AIC=-2\left(l-p\right) $$
+
+$$ AICC=-2\left(l-\frac{np}{n-p-1}\right) $$
+
+$$ HannanQuinn=-2\left(l-p \log(\log n)\right) $$
+
+$$ BIC=-2l+p \log n $$
+
+$$ BIC2=\frac{-2l+p \log n}{n} $$
+
+$$ BICC = \log \hat\sigma^2 + (p-1)\frac{\log n}{n}$$
+
+
 
 #### Bibliography
 

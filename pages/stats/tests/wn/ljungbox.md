@@ -38,6 +38,7 @@ This test is implemented in the class `demetra.stats.tests.LjungBoxTest`
     int N=100;
     DataBlock sample=DataBlock.make(N);
     Random rnd=new Random();
+    sample.set(rnd::nextDouble);
     LjungBoxTest lb=new LjungBoxTest(sample);
     StatisticalTest test = lb
              .lag(3)
