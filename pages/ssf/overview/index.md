@@ -1,9 +1,9 @@
 ---
 layout: left-menu
-title: Model
+title: General Model
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: State space model
-order: 100
+order: 0
 ---
 
 # {{page.description}}
