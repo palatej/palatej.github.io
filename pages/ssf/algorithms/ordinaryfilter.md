@@ -9,7 +9,7 @@ order: 10
 
 # Ordinary filter
 
-Using the usual [notations](.\notations.html) we define the ordinary filter as follows:
+Using the usual [notations](./index.html) we define the ordinary filter as follows:
 
 #### Univariate model
 
