@@ -40,6 +40,7 @@ $$ \mathbf{T_t}, \mathbf{V_t} [=S_t S_t'], \mathbf{S_t} [=Cholesky(V)] $$
 
 $$ \mathbf{a_{0}}[=0], \mathbf{P_*} [=0], \mathbf{B} [=0], \mathbf{P_\infty} [=BB'] $$
 
+
 #### Bibliography
 
 [1] _Anderson, B. D. O. and Moore, J. B._ (1979), “Optimal Filtering”, Prentice Hall.

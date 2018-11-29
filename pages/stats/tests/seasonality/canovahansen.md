@@ -1,11 +1,12 @@
 ---
 layout: left-menu
-title:Canova-Hansen test
+title: Canova-Hansen test
 tagline: technical documentation for JDemetra+ using GitHub Pages
 description: Canova-Hansen test
 category: Seasonality tests
 order: 2040
 ---
+
 # {{page.description}}
 
 ### Method 1 (Gretl)
