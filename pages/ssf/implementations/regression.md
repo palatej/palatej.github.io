@@ -6,7 +6,7 @@ description: Regression variables
 category: Generic
 order: 1100
 ---
-{{page.description}}
+# {{page.description}}
 
 Regression variables $X_1, \cdots,X_k$ can be added to any state space model by extending the state with the regression coefficients ($\gamma = \gamma_1, \cdots,\gamma_k$).
 We consider that the initial model has a state space form (SSF) identified by the state $\tilde\alpha_t$ and the system matrices $\left[ \tilde Z_t,\tilde H_t,\tilde T_t,\tilde V_t, \tilde S_t, \tilde a_{-1}, \tilde P_*,\tilde B,\tilde P_\infty \right]$ (see [Ssf model](../model.md) ).
