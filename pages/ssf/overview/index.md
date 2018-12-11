@@ -15,7 +15,7 @@ $$ y_t = Z_t \alpha_t + \epsilon_t,\quad \epsilon_t \sim N\left(0, \sigma^2 H_t\
 $$ \alpha_{t+1} = T_t \alpha_t + \mu_t, \quad \mu_t \sim N \left(0, \sigma^2 V_t \right),\quad t \ge 0 $$
 
 $y_t$  is the observation at period t, $\alpha_t$  is the state vector.
-$\epsilon_t, \mu_t$ are assumed to be serially independent at all time points and independent between them at all time points.  
+$\epsilon_t, \mu_t$ are assumed to be serially independent at all leads and lags and independent from each other.  
 
 The innovations of the state equation will be modelled as
 
@@ -41,16 +41,7 @@ $$ \mathbf{T_t}, \mathbf{V_t} [=S_t S_t'], \mathbf{S_t} [=Cholesky(V)] $$
 $$ \mathbf{a_{0}}[=0], \mathbf{P_*} [=0], \mathbf{B} [=0], \mathbf{P_\infty} [=BB'] $$
 
 
-#### Bibliography
-
-[1] _Anderson, B. D. O. and Moore, J. B._ (1979), “Optimal Filtering”, Prentice Hall.
-
-[2] _DE JONG P._ (1991): "Stable Algorithms For the State Space Model", Journal of Time Series Analysis, 12, 2, 143-157.
-
-[3] _DURBIN J. AND KOOPMAN S.J._ (2012): "Time Series Analysis by State Space Methods", second edition. Oxford University Press.
-
-[4] _HARVEY, A.C._ (1989): "Forecasting, Structural Time Series Models and the Kalman Filter", Cambridge University Press.
-
+ 
 <hr>
 
 ### Implementation details
@@ -98,3 +89,14 @@ As soon as direct matrix computations are avoided, the matrices of the system th
 Generic models are defined in the class 
 `demetra.ssf.univariate.Ssf`, which is the default implementation of the interface `demetra.ssf.univariate.ISsf` or `demetra.ssf.multivariate.Ssf`, which is the default implementation of the interface `demetra.ssf.multivariate.IMultivariateSsf`. Each state space form consists in three parts, corresponding to the measurement equation, to the transition equation and to the initialization. The modelled series is not attached to the definition of the state space form.
 
+#### Bibliography
+
+[1] _ANDERSON, B. D. O. and MOORE, J. B._ (1979), “Optimal Filtering”, Prentice Hall.
+
+[2] _DE JONG P._ (1991): "Stable Algorithms For the State Space Model", Journal of Time Series Analysis, 12, 2, 143-157.
+
+[3] _DURBIN J. AND KOOPMAN S.J._ (2012): "Time Series Analysis by State Space Methods", second edition. Oxford University Press.
+
+[4] _GOMEZ, V. AND A. MARAVALL_ (1994): "Estimation, Prediction, and Interpolation for Nonstationary Series with the Kalman Filter", Journal of the American Statistical Association, 89(426), 611-624.
+
+[5] _HARVEY, A.C._ (1989): "Forecasting, Structural Time Series Models and the Kalman Filter", Cambridge University Press.

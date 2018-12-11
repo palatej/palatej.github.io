@@ -27,6 +27,8 @@
       href: "algorithms/"
     - title: "Models"
       href: "implementations/"
+    - title: "R package"
+      href: "rpackage/"
 - title: "Time series"
   href: "/pages/ts/"
 - title: "Seasonal Adjustment"

@@ -87,14 +87,14 @@ obtain  $$  \tiny f^{Y}_{t}=\frac{1}{12} f_{t} + \frac{2}{12}f_{t-1}  +\frac{3}{
 	
 ### Measurement Equations for Surveys 	
 
-**The link between the time series and the factors** can be more sophisticated. Appart from the two options mentioned above, the measurement equation 
+**The link between the time series and the factors** can be more sophisticated. Apart from the two options mentioned above, the measurement equation 
 for some variables  (typically survey data)  may require an additional effort. 
 
-- Surveys such as the euro area economic sentiment indicator produced by the European Comission, which are
+- Surveys such as the euro area economic sentiment indicator produced by the European Commission, which are
 **correlated with the year-on-year growth rate** of GDP. Those variables may be linked to the cumulative sum of the last 12 monthly factors. If 
 the model is designed in such a way that the monthly factors represent monthly growth rates, the resulting cumulative sum boils down to 
 the year-on-year growth rate. Thus, variables expressed in terms of year-on-year growth rates or surveys that are correlated with the 
-year-on-year growth rates of the reference series should be linked to the factors using this link:
+year-on-year growth rates of the reference series should be linked to the factors using this approach:
 
 	![Y](https://github.com/nbbrd/jdemetra-nowcasting/wiki/images/YoY.png)
 
@@ -124,8 +124,8 @@ the factor that enters the more sophisticated measurement equation (\ref{modelCo
 
 - **Variables represening forecasts for a given horizon**. The solution is independent on the frequency of the variable and what it represents. In practice
 it is equivalent to *shifting* the time series forward by  $$ h $$ periods. For example, 
-one can model quarterly growth expectations produced by profesional forecasters for a given quarter in the future. You 
-may think it is a good idea to simply introduce quantitative surveys representing GDP growth forecasts exactly as you would do with the remaining
+one can model quarterly growth expectations produced by professional forecasters for a given quarter in the future. You 
+may think it is a good idea to simply introduce quantitative surveys representing expectations exactly as you would do with the remaining
 indicators. However, you may want to achieve efficiency gains by making those forecasts consistent with your model. How to do it? A GDP growth forecast for, say $$ h $$ quarters ahead is represented as $$ GDP_{t+h\times 3|t}$$
 because $$t$$ refers to the montly frequency and a quarter has 3 months. This is introduced in a model as follows:
 $$

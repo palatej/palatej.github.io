@@ -39,7 +39,7 @@ log &\quad & \ell(f_{-p+1},\ldots, f_{0}, f_{1}, \ldots,  f_{T}, y_{1},\ldots,  
 \end{eqnarray}
 $$ 
 
-where $$ \bar{f}_{t} $$  is a vector containing the first first $$ p $$ lags of $$f_{t} $$ with a parameters 
+where $$ \bar{f}_{t} $$  is a vector containing the first $$ p $$ lags of $$f_{t} $$ with a parameters 
 vector $$\theta=\bar{f}_{0},\bar{Q}_{0},Q,A, R_{\psi},\Lambda$$. Note that
 $$A=[A_{1}\ldots A_{p}]$$ and it is therefore different from the transition matrix of the state-space representation of the model.
 
@@ -124,9 +124,9 @@ with respect to $$A$$, keeping the remaining
 parameters fixed to the values resulting from the previous iteration. Although 
 we do not compute this formula, the EM algorithm remains valid. As opposed to the standard case, 
 this modification in the M-step, allows us to exploit extra information contained in the likelihood function to improve the estimation of $$A$$. This affects the persistence of the variables, which is key for understanding the dynamics of the variables. In the case of inflation
-for example, the persistance is a key parameter that monetary policy makers look at. 
+for example, the persistence is a key parameter that monetary policy makers look at. 
 
-- But $$ A$$  also appers multiplying the loadings in the likelihood function, so the M-step for the loadings in the measurement equations needs to be modified. Consider for
+- But $$ A$$  also appears multiplying the loadings in the likelihood function, so the M-step for the loadings in the measurement equations needs to be modified. Consider for
 example inflation. The loadings associated to a variable that we think it is related to inflation expectations could be defined as
 follows: 
 $$ 
