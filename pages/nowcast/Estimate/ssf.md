@@ -1,8 +1,8 @@
 ---
 layout: left-menu
-title: Estimation
+title: State-Space form
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: State space form of the dynalic factor model
+description: State space form of the dynamic factor model
 category: Estimation
 order: 40
 ---

@@ -84,6 +84,8 @@ $$
 \definecolor{energy}{RGB}{114,0,172}
 $$ 
 
+#### Restrictions related to the use of variables that represent expectations (not implemented)
+
 - When the model contains a block of variables $$ y^{e}_{t} $$  that reflect expectations about the future, 
 ($$ y^{e}_{t} =[y^{e}_{u,t}\: y^{e}_{\pi,t} ]^{'}$$), where $$y^{e}_{u,t}$$ and $$y^{e}_{\pi,t}$$ represent  $$h$$ months ahead forecasts for 
 unemployment ($$u_{t+h|t}$$) and inflation ($$\pi_{t+h|t}$$), respectively.  This means the likelihood formula (\ref{like}) is modified as follows

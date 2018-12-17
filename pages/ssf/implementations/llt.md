@@ -13,8 +13,11 @@ order: 120
 The local linear trend block describes the following trend component:
 
 $$ l_{t+1} = l_t + n_t +  \epsilon_t $$
+
 $$ n_{t+1} = n_t + \mu_t $$
+
 $$ \epsilon_t \sim N(0, \sigma^2_l)$$
+
 $$ \mu_t \sim N(0, \sigma^2_n)$$
 
 
