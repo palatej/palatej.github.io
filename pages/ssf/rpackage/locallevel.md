@@ -3,8 +3,8 @@ layout: left-menu
 title: Local Level
 tagline: JD+. State space models
 description: Local level (random walk) model
-category: R package
-order: 30
+category: Models
+order: 1
 ---
 # {{page.description}}
 
