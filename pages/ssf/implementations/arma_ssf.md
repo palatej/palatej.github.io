@@ -38,7 +38,10 @@ We also have that $y_{t+i|t} = \sum_{j=i}^\infty {\psi_j \epsilon_{t+i-j}}$
 ##### Dynamics
 
 $$ T_t = \begin{pmatrix}0 &1 & 0 & \cdots & 0  \\0& 0 & 1 & \cdots & 0\\ \vdots & \vdots & \vdots & \ddots & \vdots\\ 0 & 0 & 0 & \cdots & 1\\
-0 & -\varphi_r & \cdots & \cdots &-\varphi_1 \end{pmatrix}$$
+-\varphi_r & \cdots  & \cdots & \cdots &-\varphi_1 \end{pmatrix}$$
+
+<p style="text-align: center;"> with $\varphi_{j}=0$ for $j>p$  </p>
+
 
 $$ S_t = \begin{pmatrix}1 \\ \psi_1 \\ \vdots\\ \psi_s \end{pmatrix} $$  
 

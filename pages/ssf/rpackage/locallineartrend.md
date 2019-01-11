@@ -3,8 +3,8 @@ layout: left-menu
 title: Local Linear Trend
 tagline: JD+. State space models
 description: Local linear trend model
-category: R package
-order: 40
+category: Models
+order: 2
 ---
 # {{page.description}}
 
@@ -143,10 +143,10 @@ represents the constant drift component).
 
 
 - Let's assign the names "eq1" and "eq2" to our measurement equations, where the time series are called "y" ($ y_{t} $) and "yh" ($ y_{t+h|t} $) 
-The I.I.D. measurement error component $ var(\epsion_{1,t})=\sigma^2 \sigma^2_{\epsilon_1} $ will be identified using the normalization 
-assumption that $ \sigma^2_{\epsilon_1}=1 $. In turn, $ var(\epsion_{2,t}) $ is left unrestricted. 
+The I.I.D. measurement error component $$ var(\epsilon_{1,t})=\sigma^2 \sigma^2_{\epsilon_1} $$ will be identified using the normalization 
+assumption that $$ \sigma^2_{\epsilon_{1}}=1  $$. In turn, $$ var(\epsilon_{2,t}) $$ is left unrestricted. 
 ```R
-eq1 <-jd3_ssf_equation("y1", variance=1, fixed=TRUE)                            
+eq1 <-jd3_ssf_equation("y", variance=1, fixed=TRUE)                            
 add(eq1, "trend")                                         
 eq2 <-jd3_ssf_equation("yh", variance=1, fixed=FALSE)                            
 add(eq2, "trend", jd3_ssf_loadings(c(1,2),c(1,h)) )                                         
