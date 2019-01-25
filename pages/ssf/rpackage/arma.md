@@ -1,13 +1,14 @@
 ---
 layout: left-menu
-title: AR(p) extended
+title: ARMA
 tagline: JD+. State space models
-description: Autoregressive model of order p
+description: Autoregressive Moving Average (ARMA) Model
 category: Models
-order: 4
+order: 5
 ---
 # {{page.description}}
 
+TO DO 
 
 ## [Definition](../implementations/ar2.html) 
 The AR process is defined by

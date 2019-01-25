@@ -37,19 +37,19 @@ $$ T_t = \begin{pmatrix}-\varphi_1 & \cdots & \cdots  & -\varphi_p  \\
 						\vdots     & \ddots &  \ddots & \vdots\\ 
 						0          &   0    &  1      & 0  \end{pmatrix}$$
 
-$$ S_t = \begin{pmatrix} \sigma_{ar} \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
+$$ S_t = \sigma_{ar} \begin{pmatrix} 1 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
 
 $$ V_t = S S' $$
 
-#### Measurement
+##### Measurement
 
 $$ Z_t = \begin{pmatrix} 1 & 0 & \cdots & 0\end{pmatrix}$$
 
 $$ h_t = 0 $$
 
-#### Initialization 
+##### Initialization 
 
-$$ \alpha_{-1} = \begin{pmatrix}1 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
+$$ \alpha_{-1} = \begin{pmatrix}0 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
 
 $$ P_{*} = \Omega $$
 
@@ -61,7 +61,7 @@ $$ \Omega\left(i,j\right) = \Omega\left(i-1,j-1\right)-\psi_i \psi_j $$
 
 <hr>
 
-#### Implementation
+##### Implementation
 
 AR models are implemented in the class `demetra.arima.ssf.SsfArima`
 

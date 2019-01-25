@@ -55,7 +55,7 @@ $$ h_t = 0 $$
 
 #### Initialization 
 
-$$ \alpha_{-1} = \begin{pmatrix}1 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
+$$ \alpha_{-1} = \begin{pmatrix}0 \\ 0 \\ \vdots\\ 0 \end{pmatrix} $$  
 
 $$ P_{*} = \Omega $$
 

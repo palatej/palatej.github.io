@@ -59,7 +59,7 @@ jd3_ssf_equation(name,variance, fixed )
     <td class="tg-0pky">fixed</td>
     <td class="tg-0pky"> <i>logical</i>  that triggers estimation of the variance $\sigma^2_{\epsilon}$  (<b>FALSE</b>) or  
 	fixes it (<b>TRUE</b>) to the value pre-specified by the input variance  (zero by defaut)</td>
-    <td class="tg-0pky"><b>FALSE</b></td>
+    <td class="tg-0pky"><b>TRUE</b></td>
     <td class="tg-0pky"> </td>
   </tr>
 </table></div>
@@ -101,10 +101,10 @@ jd3_ssf_loadings(pos, weights )
     <td class="tg-0pky">  <i>double array</i> defining the position of each one of the elements of the block of states defined </td>
     <td class="tg-0pky">Empty or <b>Null</b>  indicates by default the first state included in the block (pos=0)</td>
     <td class="tg-0pky"> For instance, the block of states generated with the jd3_ssf_ar2(...) function follows the 
-	following pattern: x(t-p), x(t-p+1),..., x(t),x(t+1|t),...,x(t+h|t), where p represents the number of lags selected 
-	and h stands for the forecast horizon selected. This means that in order to select x(t-p), one must specify pos=0.  
+	following pattern: x(t-nlags), x(t-nlags+1),..., x(t),x(t+1|t),...,x(t+h|t), where p represents the number of lags selected 
+	and h stands for the forecast horizon selected. This means that in order to select x(t-nlags), one must specify pos=0.  
 	Alternatively, the contemporaneous and future values
-    of the state (i.e. x(t),x(t+1|t),...,x(t+h|t)) are selected by specifying pos=c(p,p+1,...,p+h)	</td>
+    of the state (i.e. x(t),x(t+1|t),...,x(t+h|t)) are selected by specifying pos=c(nlags,nlags+1,...,nlags+h)	</td>
   </tr>
   <tr>
     <td class="tg-0pky">weights</td>
@@ -173,7 +173,7 @@ add(object, item , coeff, fixed, loading)
   <tr>
     <td class="tg-0pky">fixed</td>
     <td class="tg-0pky"> <i>logical</i>  that triggers estimation of <i>coeff </i>  (<b>FALSE</b>) or  fixes it (<b>TRUE</b>) to a pre-specified value</td>
-    <td class="tg-0pky"><b>FALSE</b></td>
+    <td class="tg-0pky"><b>TRUE</b></td>
     <td class="tg-0pky"> </td>
   </tr>
     <tr>

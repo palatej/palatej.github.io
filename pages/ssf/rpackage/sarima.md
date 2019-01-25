@@ -1,12 +1,15 @@
 ---
 layout: left-menu
-title: AR(p) extended
+title: SARIMA
 tagline: JD+. State space models
-description: Autoregressive model of order p
+description: Autoregressive Integratded Moving Average (ARIMA) Model
 category: Models
-order: 4
+order: 8
 ---
 # {{page.description}}
+
+
+TO DO 
 
 
 ## [Definition](../implementations/ar2.html) 

@@ -15,7 +15,7 @@ The R language is widely used among statisticians and data analysts. Here we des
 
 - Install rJava
 - Install our package
-- Go directly to the [examples](make link)
+- Go directly to the [examples](../rpackage/ar2.html) 
 
 ## Content of the package
 
