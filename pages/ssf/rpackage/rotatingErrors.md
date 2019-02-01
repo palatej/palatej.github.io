@@ -2,10 +2,11 @@
 layout: left-menu
 title: Rotating Panels
 tagline: JD+. State space models
-description: A model to exploit surveys constructed with rotating panels
-category: Examples
-order: 4
+description: Modeling errors in surveys with overlapping panels
+category: Models
+order: 9
 ---
+
 # {{page.description}}
 
 
@@ -36,7 +37,7 @@ The following concepts are required to define a rotating panel:
  <tr>
     <td class="tg-0pky">Survey period</td>
     <td class="tg-0pky"> Number of periods (in the base frequency) during which the survey continiously takes place </td>
-    <td class="tg-0pky">  $nlags$ </td>
+    <td class="tg-0pky">  $lag$ </td>
    </tr>
   <tr>
     <td class="tg-0pky">Stint</td>
@@ -60,7 +61,7 @@ The following concepts are required to define a rotating panel:
   </tr>
     <tr>
     <td class="tg-0pky">Correlation term</td>
-    <td class="tg-0pky"> Part of the wave-specific error at time $t$ that is correlated to the error of the previous wave at time $t-nlags$       </td>
+    <td class="tg-0pky"> Part of the wave-specific error at time $t$ that is correlated to the error of the previous wave at time $t-lag$       </td>
     <td class="tg-0pky"> $\epsilon^{(i)}_t$</td>
   </tr>
 </table></div>
@@ -122,7 +123,7 @@ jd3_ssf_msae(name, nwaves, ar, fixedar=TRUE, lag=1)
     <td class="tg-0pky"><b>FALSE</b></td>
     <td class="tg-0pky"> If for example, nwaves=5, one can assume 
     that the errors specific to the first wave of a given survey period are independent from the errors specific to the last wave of the previous survey period  
-	( $\varepsilon^{1}_{t}\perp  \varepsilon^{5}_{t-nlags} $, so 
+	( $\varepsilon^{1}_{t}\perp  \varepsilon^{5}_{t-lag} $, so 
     the coefficient $\phi^{(1)}$ is equal to zero, but $\phi^{(2)}$, $\phi^{(3)}$, $\phi^{(4)}$ and $\phi^{(5))}$ may be estimated or calibrated) </td>
   </tr>
   <tr>
@@ -147,7 +148,6 @@ jd3_ssf_msae(name, nwaves, ar, fixedar=TRUE, lag=1)
  
 #### Examples of use 
 [to do ]
-
 
 
 

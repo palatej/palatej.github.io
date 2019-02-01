@@ -57,7 +57,7 @@ $$ V_t = \sigma_{ar}^{2} S S' $$
 Depending on the estimation algorithm used, it may be preferrable to slightly modify the model and set $\sigma_{ar}^2=1$
 
 
-### ar
+### jd3_ssf_ar2
 ***
 This R function is used to define an autoregressive model that belongs to the JD+ class `JD3_SsfItem` 
 
@@ -66,7 +66,7 @@ Object of the JD+ class `JD3_SsfItem`:
 
 #### usage 
  
-ar(name, ar, fixedar, variance, fixedvariance, nlags, zeroinit)
+jd3_ssf_ar2(name, ar, fixedar, variance, fixedvariance, nlags, zeroinit)
  
 
 <style type="text/css">
