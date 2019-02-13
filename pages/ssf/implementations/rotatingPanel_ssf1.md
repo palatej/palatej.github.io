@@ -9,7 +9,7 @@ order: 2011
 
 # {{page.description}}
 
-#### [Error Specification in a Rotating Panel](../implementations/rotatingPanel_ssf0.html)
+#### Error Specification in a [Rotating Panel](../implementations/rotatingPanel_ssf0.html)
 
 The error term $$e^{(i)}_{t}$$ has a particular structure
 that is given by the rotating survey design:
@@ -24,7 +24,12 @@ Here, we describe the $$\color{red} bias$$ component, which follows a random wal
 
 $$ b^{(i)}_{t} = b^{(i)}_{t-1} + w^{(i)}_{t} $$, 
 
-where $$w^{(i)}_{t} \sim N\left(0, \sigma^2_{i} \right)$$ and $$ b^{(1)}_{t} = -\sum_{i=2}^{W} b^{(i)}_{t} $$
+Most of the times, this component cannot be identified together with additional trend components. Thus, one identification restriction
+is to assume that the bias terms for all weights is equal to zero (cite [example]()): 
+
+$$b^{(1)}_{t} = -\sum_{i=2}^{W} b^{(i)}_{t} $$
+
+Alternatively, one could assume that there is no bias in the first wave (cite [example]()).
 
 
 
@@ -36,7 +41,7 @@ The block in the state vector corresponding to the bias component takes the foll
 
 $$ \alpha_t= \begin{pmatrix} b^{(2)}_t \\ b^{(3)}_t\\ \vdots\\ b^{(W)}_t \end{pmatrix}$$  
 
-[should I simply refer to the local level model?]
+Individally, each term is defined as a [local level model](../implementations/ll.html)
 
 ##### Dynamics
 
@@ -68,6 +73,10 @@ plus the sum of the remaining ones equals zero, i.e. $$b^{(1)}_{t} = -\sum_{i=2}
 takes the following form:
 
 $$ Z_t = \begin{pmatrix} -1 & -1 & \cdots & -1    \\  1 & 0 & \cdots & 0 \\   \vdots & \vdots & \ddots & \vdots\\   0 & 0 & \cdots & 1 \end{pmatrix} $$
+
+One could define alternative measurement equations. For example, assuming that the bias term for the first wave is equal to zero is possible
+by fixing to zero the first row of $$ Z_t $$ 
+
 
 $$ H_t = 0 $$
 
