@@ -227,7 +227,7 @@ with  $$ \phi^{(i)}_{1}=0 $$ for  $$ i=1 $$ and  $$ \phi^{(i)}_{2}=0 $$  for $$ 
 
 #### References
 
-[to be added]
+ 
   
  - HARVEY, A. and C.H. Chung(2000),  [Estimating the underlying change in unemployment in the UK](https://doi.org/10.1111/1467-985X.00171), *Journal of the Royal Statistical Society: Series A*, Volume **163**, p. 303-339
  - van den BRAKEL, J. and S. Krieg (2009),  Structural time series modelling of the monthly unemployment rate in a rotating panel] , *Discussion Paper*, 09031
