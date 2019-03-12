@@ -33,7 +33,7 @@ where $$\epsilon^{(i)}_{t} \sim N\left(0, (1-(\phi^{(i)}_{1})^{2})(k^{(i)})^{2} 
 that $\phi^{(i)}_{1}=0$ for  $i=1$. 
 
 The component $(k^{(i)})^{2}$ that appears in the design-based variances will appear in the measurement 
-equation by defining $$ \tilde{\varepsilon}^{(i)}_{t}= k^{(i)} \varepsilon^{(i)}_{t} $$
+equation by defining $$ \tilde{\varepsilon}^{(i)}_{t}= \tilde{k}^{(i)} \varepsilon^{(i)}_{t} $$
 
 
 
@@ -44,14 +44,14 @@ A representation of all possible correlation patterns in a panel defined by $ W=
 
 ##### State vectors: 
 Assuming that individuals in each wave do not fully update their beliefs in two consecutive survey periods, the transition equation 
-will need to capture the correlation of $$\tilde{\varepsilon}^{(i)}_{t}$$  and $$\tilde{\varepsilon}^{(i-1)}_{t-nlags}$$. The required state 
+will need to capture the correlation of $$\varepsilon^{(i)}_{t}$$  and $$\varepsilon^{(i-1)}_{t-nlags}$$. The required state 
 vector follows
  
-$$ \alpha_t= \begin{pmatrix} \tilde{\varepsilon}^{(1)}_{t}  \\ \tilde{\varepsilon}^{(2)}_{t} \\ \vdots \\ \tilde{\varepsilon}^{(W)}_{t} \\ \hline \tilde{\varepsilon}^{(1)}_{t-1}  \\ \tilde{\varepsilon}^{(2)}_{t-1} \\ \vdots \\ \tilde{\varepsilon}^{(W)}_{t-1}
-\\ \hline \vdots \\ \hline \tilde{\varepsilon}^{(1)}_{t-nlags+1} \\ \tilde{\varepsilon}^{(2)}_{t-nlags+1}   \\ \vdots \\ \tilde{\varepsilon}^{(W)}_{t-nlags+1}  \end{pmatrix}$$  
+$$ \alpha_t= \begin{pmatrix} \varepsilon^{(1)}_{t}  \\ \varepsilon^{(2)}_{t} \\ \vdots \\ \varepsilon^{(W)}_{t} \\ \hline \varepsilon^{(1)}_{t-1}  \\ \varepsilon^{(2)}_{t-1} \\ \vdots \\ \varepsilon^{(W)}_{t-1}
+\\ \hline \vdots \\ \hline \varepsilon^{(1)}_{t-nlags+1} \\ \varepsilon^{(2)}_{t-nlags+1}   \\ \vdots \\ \varepsilon^{(W)}_{t-nlags+1}  \end{pmatrix}$$  
 
-Note, however, that the pattern of correlations may be more complex. In the limit, when $$\tilde{\varepsilon}^{(i)}_{t}$$  may be correlated
-with $$\tilde{\varepsilon}^{(i-W+1)}_{t-nlags\times(W-1)}$$, the resulting state vector will contain $$\alpha_t, \cdots, \alpha_{t-nlags}, \cdots, \alpha_{t-nlags\times(W-1) }$$. 
+Note, however, that the pattern of correlations may be more complex. In the limit, when $$\varepsilon^{(i)}_{t}$$  may be correlated
+with $$\varepsilon^{(i-W+1)}_{t-nlags\times(W-1)}$$, the resulting state vector will contain $$\alpha_t, \cdots, \alpha_{t-nlags}, \cdots, \alpha_{t-nlags\times(W-1) }$$. 
 
 
 ##### Dynamics
