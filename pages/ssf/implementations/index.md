@@ -13,5 +13,5 @@ The state vector can often be split in independent blocks; each block has its ow
 
 The framework provides numerous building blocks – elements of the state vector or loading factors – that can be combined to create the actual state space model. Some blocks are self-sufficient - they represent an actual model - but in most cases, the user will need to glue several of them.
 
-We present in this documentation the different matrices of each block. See [the general model](../overview/index.html) for the meaning of each matrix
+We present in this documentation the different matrices of each block. See [the general model](../overview/index.md) for the meaning of each matrix
 

@@ -37,7 +37,7 @@ When the covariance matrix of the process is defined up to the scaling factor $\
 $$l(y\vert \theta, \sigma^2) = \lim_{k \rightarrow \infty} \left(l(y \vert k, \theta,\sigma^2)  (2 \pi \sigma^2 k)^{d/2}\right)$$
 
 This is similar to Francke et al.(2010), (equation 14).
-Apart from the scaling factor, it also identical to the approach of Ansley and Kohn (1985) (theorem 5.1). 
+Apart from the scaling factor, it is also identical to the approach of Ansley and Kohn (1985) (theorem 5.1). 
 
 Otherwise, we use the usual definition:
 

@@ -2,13 +2,21 @@
 layout: left-menu
 title: Linear filters
 tagline: technical documentation for JDemetra+ using GitHub Pages
-description: Local polynomials. Asymmetric filters
+description: Local polynomials
 category: Filters
 order: 40
 ---
 # {{page.description}}
 
-### Description
+### Symmetric filters
+
+We consider the kernel K
+
+
+### Asymmetric filters
+
+
+#### Description
 
 At the end of the period, the series is modelled as follows:
 
@@ -41,7 +49,7 @@ $$ R = D_p^{-1} - D_p^{-1} U_p\left(U_p'D_p^{-1}U_p \right)^{-1} U_p'D_p^{-1}$$
 $$  L, M \sim p \times f $$
 $$  R \sim p \times p $$
 
-### Computation
+#### Computation
 
 - $t_1= D_p^{-1} U_p$  $\sim p \times u$
 - $t_2=U_p't_1 = U_p' D_p^{-1} U_p$  $\sim u \times u$
@@ -54,3 +62,7 @@ $$  R \sim p \times p $$
 - $r_1=Z_p d_2=Z_p \delta \delta'$  $\sim p \times z$
 - $r_2=R r_1$  $\sim p \times z$
 - $r_3=Z_p' r_2 = Z_p'R Z_p \delta \delta'$  $\sim z \times z$
+
+
+### Bibliography
+
