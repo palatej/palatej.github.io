@@ -11,29 +11,29 @@ order: 10
 
 With the usual [notations](./index.md), we define the ordinary filter as follows:
 
-#### Univariate model
+## Univariate model
 
-##### Update step t
+### Update step t
 
 $$ e_t = y_t - Z_t a_t $$   
 
-$$ C_t = P_t Z_t' $$  
+$$ M_t = P_t Z_t' $$  
 
-$$ f_t= Z_t P_t Z_t' +h_t = C_tZ_t' + h_t $$  
+$$ f_t= Z_t P_t Z_t' +h_t = M_tZ_t' + h_t $$  
 
-$$ a_{t|t} = a_t + C_t f_t^{-1}e_t $$  
+$$ a_{t|t} = a_t + M_t f_t^{-1}e_t $$  
 
-$$ P_{t|t}= P_t - C_t f_t^{-1} C_t' $$  
+$$ P_{t|t}= P_t - M_t f_t^{-1} M_t' $$  
 
 
-##### Forecast step t
+### Forecast step t
 
 $$ a_{t+1} = T_t a_{t|t} $$   
 
 $$ P_{t+1} = T_t P_{t|t} T_t' + V_t $$   
 
 
-##### Compact form
+### Compact form
 
 The two steps can be easily combined to give a more compact formulation.
 
@@ -49,12 +49,12 @@ $$ P_{t+1} = T_t P_t T_t' - K_t f_t K_t' + V_t $$
 
 However, the current implementation uses explicitly the two steps form.
 
-#### Multivariate model
+## Multivariate model
 
 
 In the multi-variate case, we use a slightly different (but strictly equivalent) implementation:
 
-##### Update step t	
+### Update step t	
 
 $$ e_t = y_t - Z_t a_t $$  
 
@@ -68,13 +68,28 @@ $$ a_{t|t} = a_t + \tilde{K_t} u_t $$
 
 $$ P_{t|t}= P_t - \tilde{K_t}\tilde{K_t}' $$  
 
-##### Forecast step t
+### Forecast step t
 
 $$ a_{t+1} = T_t a_{t|t} $$   
 
 $$ P_{t+1} = T_t P_{t|t} T_t' + V_t $$   
 
-##### Special cases
+### Compact form
+
+$$ e_t = y_t - Z_t a_t $$  
+
+$$ F_t = Z_t P_t Z_t' + H_t = R_t R_t' \quad(Cholesky)$$  
+
+$$ \tilde{K_t} =  T_t P_t Z_t' {R_t'}^{-1} \Leftrightarrow \tilde{K_t} R_t' = T_t P_t Z_t'$$  
+
+$$ u_t = R_t^{-1} e_t \Leftrightarrow R_t u_t = e_t $$  
+
+$$ a_{t+1} = T_t a_t + \tilde{K_t} u_t $$
+
+$$ P_{t+1} = T_t P_{t} T_t' + V_t - \tilde{K_t}\tilde{K_t}' $$   
+
+
+### Special cases
 
 This implementation is robust (the covariance matrices are symmetric by construction) and makes the computation of the likelihood easy. It also provides a straightforward solution for singular covariance matrices and for missing values.
 
@@ -84,7 +99,12 @@ When the covariance matrix $F_t$ is singular, some columns of $R_t$ are equal to
 
 When the measurement errors are diagonal, it should be noted that the solution based on the Cholesky decomposition is identical to the so-called univariate treatment of multi-variate models.
 
+The following elemnts are saved in objects of the class ``MultivariateFilteringResults``
 
-### Implementation
+$a_t, P_t, U_t, R_t, \tilde{K_t}$
+
+
+
+## Implementation
 
 The ordinary filter is implemented in the classes `demetra.ssf.univariate.OrdinaryFilter` and `demetra.ssf.multivariate.MultivariateOrdinaryFilter`.

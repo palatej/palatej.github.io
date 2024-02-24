@@ -8,7 +8,7 @@ order: 1020
 ---
 # {{page.description}}
 
-When the [model](index.md) is time invariant (which also implies that we don’t have missing values), it is usually much more efficient to use the Chandrasekhar recursions, which propagate the difference of the covariance matrix:
+When the [model](index.md) is time invariant (which also implies that we don’t have missing values), it is usually much more efficient to use the Chandrasekhar recursions, which propagate the differences of the covariance matrix:
 
 $$ \Delta P_t = - L_t M_t^{-1} L_t' $$
 

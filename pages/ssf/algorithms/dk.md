@@ -42,7 +42,7 @@ where $\lt A \gt$ stands for $A+A'$
 
 
 
-### Partial square root form
+## Partial square root form
 
 The partial square root form is trivially derived from the Durbin-Koopman equations, taking into account that $P_{\infty t}=B_t B_t'$.  
 
@@ -90,7 +90,7 @@ To be noted that that formulation shows in an obvious way that the rank of $B_t$
 
 <hr>
 
-### Implementation
+## Implementation
 
 The Diffuse initialization is implemented in several classes
 
@@ -105,7 +105,11 @@ The different algorithms based on the DK initialization are put together in the 
         // Creation of the ssf of an airline model
         SarimaSpecification spec = new SarimaSpecification(12);
         spec.airline();
-        arima = SarimaModel.builder(spec).theta(1, -.6).btheta(1, -.8).build();
+        arima = SarimaModel
+                .builder(spec)
+                .theta(1, -.6)
+                .btheta(1, -.8)
+                .build();
         data = Data.PROD.clone();
         SsfArima ssf = SsfArima.of(arima);
         // data

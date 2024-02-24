@@ -8,65 +8,62 @@ order: 45
 ---
 # {{page.description}}
 
-### Expectations-Maximization (EM) algorithm (`DfmEM2`)
+### Expectations-Maximization (EM) algorithm (`DfmEM`)
 
 Remember the modeling framework: 
 
 $$ 
-\begin{eqnarray}
-y_{t}&=& \Lambda f_{t} + \psi_{t}, \text{with  }  \psi_{t}\sim N(0,R_{\psi}) \\
-f_{t} &=& A_{1} f_{t-1}  + \ldots + A_{p} f_{t-p} +  u_{t},\text{with  } u_{t} \sim  N(0,Q)  
-\end{eqnarray}
+\begin{align*}
+y_{t} =&\Lambda f_{t} + \psi_{t}&, \text{with  }  \psi_{t}\sim N(0,R_{\psi}) \\
+f_{t} =&A_{1} f_{t-1}  + \ldots + A_{p} f_{t-p} +  u_{t}&,\text{with  } u_{t} \sim  N(0,Q)  
+\end{align*} 
 $$ 
-where $$ \psi_{t} $$ represents the measurement error, which is assumed to be independent from the factor 
-innovations $$ u_{t} $$. 
+where $\psi_{t}$ represents the measurement error, which is assumed to be independent from the factor innovations $u_{t}$. 
 
 The EM algorithm can be used to obtain initial values that will be fed into the numerical optimization procedures described below.
 The algorithm works by iterating two steps. The  `EStep()` (**expectation step**)  
 runs the Kalman filter recursions and compute the likelihood, while the `MStep()` (**maximization**
 step), new parameter values are computed. The new parameter values obtained at each maximization step are calculated 
-by solving the first order conditions for  $$ \Lambda $$, $$ R$$, $$ A$$ and $$ Q$$  with 
+by solving the first order conditions for  $\Lambda$, $R$, $A$ and $Q$  with 
 respect to the joint log likelihood of the data and the 
 factors ([resource](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)). 
 
 $$ 
-\begin{eqnarray}
-log &\quad & \ell(f_{-p+1},\ldots, f_{0}, f_{1}, \ldots,  f_{T}, y_{1},\ldots,  y_{T}|\theta)= \nonumber \\
-&-& \frac{1}{2} log \left|\bar{Q}_{0}\right| - \frac{1}{2} \bar{f}^{'}_{0}\bar{Q}^{-1}_{0} \bar{f}_{0} -  \frac{T}{2}log \left|Q\right|  
+\begin{align*}
+log \quad \ell(f_{-p+1},\ldots, f_{0}, f_{1}, \ldots,  f_{T}, y_{1},\ldots,  y_{T}|\theta)= \nonumber \\
+- \frac{1}{2} log \left|\bar{Q}_{0}\right| - \frac{1}{2} \bar{f}^{'}_{0}\bar{Q}^{-1}_{0} \bar{f}_{0} -  \frac{T}{2}log \left|Q\right|  
 - \frac{1}{2}\mathrm{tr}\left[ Q^{-1}\sum^{T}_{t=1} (f_{t}-A \bar{f}_{t-1})(f_{t}-A \bar{f}_{t-1})^{'}\right]   \nonumber \\
-&-& \frac{T}{2} log \left|R_{\psi}\right| - \frac{1}{2}\mathrm{tr}\left[ R_{\psi}^{-1}\sum^{T}_{t=1} (y_{t}-\Lambda f_{t})(y_{t}-\Lambda f_{t})^{'}\right]   
-\label{like}
-\end{eqnarray}
+- \frac{T}{2} log \left|R_{\psi}\right| - \frac{1}{2}\mathrm{tr}\left[ R_{\psi}^{-1}\sum^{T}_{t=1} (y_{t}-\Lambda f_{t})(y_{t}-\Lambda f_{t})^{'}\right]   
+\end{align*}
 $$ 
 
-where $$ \bar{f}_{t} $$  is a vector containing the first $$ p $$ lags of $$f_{t} $$ with a parameters 
-vector $$\theta=\bar{f}_{0},\bar{Q}_{0},Q,A, R_{\psi},\Lambda$$. Note that
-$$A=[A_{1}\ldots A_{p}]$$ and it is therefore different from the transition matrix of the state-space representation of the model.
+where $\bar{f}_{t}$  is a vector containing the first $p$ lags of $f_{t}$ with a parameters vector $\theta=\bar{f}_{0},\bar{Q}_{0},Q,A, R_{\psi},\Lambda$. Note that
+$A=[A_{1}\ldots A_{p}]$ and it is therefore different from the transition matrix of the state-space representation of the model.
 
-The equations resulting from the M-step at each iteration $$i$$ follow. Note that they are calculated under 
-the assumption that the initial conditions are given ( i.e.  $$ \bar{f}_{0},\bar{Q}_{0}$$  are fixed):
+The equations resulting from the M-step at each iteration $i$ follow. Note that they are calculated under 
+the assumption that the initial conditions are given ( i.e.  $ \bar{f}_{0},\bar{Q}_{0}$  are fixed):
 
 
 $$ 
-\begin{eqnarray}
+\begin{align*}
 A^{(i)} &=& \left( \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t}\bar{f}^{'}_{t-1}|\Omega_{T}]\right)  \left(\sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[\bar{f}_{t-1}\bar{f}^{'}_{t-1} | \Omega_{T}]\right)^{-1}  \\
 \Lambda^{(i)} &=& \left( \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[y_{t}f^{'}_{t}|\Omega_{T}]\right) \left( \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t}f^{'}_{t}|\Omega_{T}]\right)^{-1} \\
 Q^{(i)} &=& \left( \frac{1}{T} \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t}f^{'}_{t}|\Omega_{T}]- A^{i} \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t-1}f^{'}_{t}|\Omega_{T}] \right)  \\
 R^{(i)}_{\psi} &=& diag \left( \frac{1}{T} \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[y_{t}y^{'}_{t}|\Omega_{T}]- \Lambda^{i} \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t}y^{'}_{t}|\Omega_{T}] \right)
-\end{eqnarray}
+\end{align*}
 $$ 
 
 #### Missing Values
 
-In the presence of missing values, the loadings matrix $$ \Lambda^{(i)} $$ and $$ R^{(i)} $$  are 
+In the presence of missing values, the loadings matrix $\Lambda^{(i)}$ and $R^{(i)}$  are 
 calculated **for each variable** by using only the periods of time for which data is available. That means that if a variable does not exist for a given 
-period $$t$$, **both** components of the formula for $$ \Lambda^{(i)}$$  will not be used for that period. 
+period $t$, **both** components of the formula for $\Lambda^{(i)}$  will not be used for that period. 
  
 #### Restrictions in the parameters
 
 
 - The loadings for quarterly variables, for example, load on a weighted average of the factors. For those variables, the formula is almost the same as above 
-with only one difference: we above expectations containing montly factors are replaced by an equivalent expression where the factors are quarterly. That is:
+with only one difference: the above expectations containing montly factors are replaced by an equivalent expression where the factors are quarterly. That is:
 $$ 
 f^{Q}_{t}={\frac{1}{3} f_{t}} +\frac{2}{3}{f_{t-1}} + {f_{t-2}} +\frac{2}{3}{f_{t-3}} +\frac{1}{3}{f_{t-4}}
 $$ 
@@ -75,29 +72,25 @@ $$
 lower triangular part yields a similar outcome as expression (6):
 
 $$ 
-\begin{eqnarray}
+\begin{align*}
 A^{(i)} = lowerTriang \left\{ \left( \sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[f_{t}\bar{f}^{'}_{t-1}|\Omega_{T}]\right)  \left(\sum^{T}_{t=1} \mathbb{E}_{\theta_{(i-1)}}[\bar{f}_{t-1}\bar{f}^{'}_{t-1} | \Omega_{T}]\right)^{-1}  \right\} 
-\end{eqnarray}
+\end{align*}
 $$ 
 
-$$ 
-\definecolor{energy}{RGB}{114,0,172}
-$$ 
 
 #### Restrictions related to the use of variables that represent expectations (not implemented)
 
-- When the model contains a block of variables $$ y^{e}_{t} $$  that reflect expectations about the future, 
-($$ y^{e}_{t} =[y^{e}_{u,t}\: y^{e}_{\pi,t} ]^{'}$$), where $$y^{e}_{u,t}$$ and $$y^{e}_{\pi,t}$$ represent  $$h$$ months ahead forecasts for 
-unemployment ($$u_{t+h|t}$$) and inflation ($$\pi_{t+h|t}$$), respectively.  This means the likelihood formula (\ref{like}) is modified as follows
+- When the model contains a block of variables $y^{e}_{t}$  that reflect expectations about the future, 
+($ y^{e}_{t} =[y^{e}_{u,t}\: y^{e}_{\pi,t} ]^{'}$), where $y^{e}_{u,t}$ and $y^{e}_{\pi,t}$ represent  $h$ months ahead forecasts for unemployment ($u_{t+h|t}$) and inflation ($\pi_{t+h|t}$), respectively.  This means the likelihood formula (\ref{like}) is modified as follows
 $$ 
-\begin{eqnarray}
+\begin{align*}
 log &\quad & \ell(f_{0}, f_{1}, \ldots,  f_{T}, y_{1},\ldots,  y_{T}|\theta)= \nonumber \\
 &-& \frac{1}{2} log \left|Q_{0}\right| - \frac{1}{2} f^{'}_{0}Q^{-1}_{0} f_{0} -  \frac{T}{2} log \left|Q\right|  - \frac{1}{2}\mathrm{tr}\left[ Q^{-1}\sum^{T}_{t=1} (f_{t}-A \bar{f}_{t-1})(f_{t}-A \bar{f}_{t-1})^{'}\right]   \nonumber \\
 &-& \frac{T}{2} log \left|R_{\psi}\right| - \frac{1}{2}\mathrm{tr}\left[ R_{\psi}^{-1}\sum^{T}_{t=1} (y_{t}-{\color{blue}\Lambda^{*}} f_{t})(y_{t}-{\color{blue} \Lambda^{*}} f_{t})^{'}\right]   
 \label{like2}
-\end{eqnarray}
-$$ 
-where the factor loadings corresponding to 
+\end{align*}
+$where the factor loadings corresponding to 
+
 $$ y_{t} =\left( 
 \begin{array}{l}
 y_{u,t}  \\
@@ -117,10 +110,15 @@ $$ {\color{blue} \Lambda^{*}}=\left[
 $$ 
 
 
-- By noticing that  $$\color{red} A^{h} $$ enters the factor loadings for variables reflecting **expectations**, the derivative of the likelihood 
-with respect to $$A$$ will be more complex. Note 
-that  $$ \frac{\partial \text{trace}(f_{t}A^{h}) }{\partial A} = \sum^{h-1}_{r=0}(A^{r}f_{t}A^{h-4-1})'$$, so we can 
-obtain a new formula where solving the first order condition for $$A $$ would become
+- By noticing that  $\color{red} A^{h}$ enters the factor loadings for variables reflecting **expectations**, the derivative of the likelihood 
+with respect to $A$ will be more complex. Note 
+that 
+
+$$
+\frac{\partial \text{trace}(f_{t}A^{h}) }{\partial A} = \sum^{h-1}_{r=0}(A^{r}f_{t}A^{h-4-1})'
+$$ 
+
+, so we can obtain a new formula where solving the first order condition for $A$ would become
 much more complex whenever $$h>2$$. Thus,  we propose to replace this step by a directly numerically maximizating the likelihood 
 with respect to $$A$$, keeping the remaining
 parameters fixed to the values resulting from the previous iteration. Although 
@@ -150,13 +148,13 @@ $$
 \label{newM}
 \end{eqnarray}
 $$ 
-where $$y_{\pi,t}$$ stands for inflation and $$y^{e}_{\pi,k}$$ represents inflation expectations $$h $$ periods ahead. We use 
-different time indices $$t$$ and $$k$$ as a way to underline the possibility that $$y_{\pi,t}$$ and $$y^{e}_{\pi,k}$$ are not
+where $y_{\pi,t}$ stands for inflation and $y^{e}_{\pi,k}$ represents inflation expectations $h$ periods ahead. We use 
+different time indices $t$ and $k$ as a way to underline the possibility that $y_{\pi,t}$ and $y^{e}_{\pi,k}$ are not
 necessarily observable for the same periods.  As one can observe by looking at the second element inside each parenthesis 
 of equation  (\ref{newM}), having few observables for the expectations data does not prevent us from obtaining 
-estimates of $$\Lambda^{(i)}_{\pi}$$. The reason is that the data points corresponding to the actual inflation data
+estimates of $\Lambda^{(i)}_{\pi}$. The reason is that the data points corresponding to the actual inflation data
 are informative about the loadings. Interestingly, the larger the number of data points for the expectations data, 
-the larger its weight in the estimation of  $$\Lambda^{(i)}_{\pi}$$.
+the larger its weight in the estimation of $\Lambda^{(i)}_{\pi}$.
 
 ### Numerical optimization methods
 

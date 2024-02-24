@@ -8,10 +8,11 @@ order: 1050
 ---
 {{page.description}}
 
-#### Introduction
+## Introduction
 
-We consider the aggregation of $n$ state space models such that the innovations of the transition equations are independent. Moreover, we suppose that at most one of the models (by convention, the first one) has measurement errors.  
-#### State vector
+We consider the aggregation of $n$ state space blocks such that the innovations of the transition equations are independent.   
+
+## State block
 
 The state vector is defined as the stack of the state vectors of the different models
 

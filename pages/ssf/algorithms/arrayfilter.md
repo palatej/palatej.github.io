@@ -47,4 +47,4 @@ $$ a_{t+1} = T_t a_{t} + K_t u_t  $$
 
 The array filter is implemented in the classes `jdplus.ssf.array.ArrayFilter` and `jdplus.ssf.array.MultivariateArrayFilter`.
 
-Those filters will use a modified representation of the state, which contains the Cholesky factor of its covariance matrix (see **jdplis.ssf.array.LState**)
+Those filters will use a modified representation of the state, which contains the Cholesky factor of its covariance matrix (see ``jdplus.ssf.array.LState``

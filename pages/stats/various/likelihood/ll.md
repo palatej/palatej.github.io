@@ -97,6 +97,25 @@ $$ BIC2=\frac{-2l+p \log n}{n} $$
 
 $$ BICC = \log \hat\sigma^2 + (p-1)\frac{\log n}{n}$$
 
+### Properties of the ML estimators
+
+
+The score vector $\frac{\partial log L(\theta)}{\partial \theta}$ is $0$ at the maximum
+
+Under some regualrity conditions, we have that $\hat\theta$ is asymptotically distributed as $N(\theta, \frac{1}{n}I(\theta)^{-1})$ where 
+ $I(\theta)$ is the information matrix.
+
+ $I(\theta)=-E(H(\theta))$ where $H(\theta)$ is the hessian of the log-likelihood $H(\theta) = \frac{\partial^2 log L }{\partial \theta \partial \theta'}$ is an approximation of $-I(\theta)$ where the information matrix $I(\theta)=-E(H(\theta))$
+
+In practice, we use the "observed information matrix", which is $-H(\theta$) and $\hat\theta$ is asymptotically distributed as $N(\theta, -\frac{1}{n}H(\theta)^{-1})$
+
+When we use the deviances $d(\theta)$, the score becomes $-\frac{n}{2 d(\theta)}\frac{\partial d(\theta)}{\partial \theta} $ and the hessian $-\frac{n}{2 d(\theta)}\frac{\partial d^2(\theta)}{\partial \theta_i \partial \theta_j} $, which means that the variance of $\hat \theta$ is $-\frac{1}{2 d(\theta)}\frac{\partial d^2(\theta)}{\partial \theta_i \partial \theta_j}$
+
+
+
+<hr>
+
+
 
 
 #### Bibliography

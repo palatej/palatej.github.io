@@ -28,8 +28,7 @@ The initial ($\equiv t=0$) conditions of the filter are defined as follows:
 
 $$ \alpha_{0} = a_{0} + B\delta + \mu_{0}, \quad \delta \sim N\left(0, \kappa I \right),\: \mu_{0} \sim N\left(0, P_*\right)$$
 
-where  $\kappa$ is arbitrary large. $P_*$ is the variance of the stationary part of the initial state vector and $BB'=P_\infty$
-models the diffuse part. 
+where  $\kappa$ is arbitrary large. $P_*$ is the variance of the stationary part of the initial state vector and $B$ models the diffuse part. We write $BB'=P_\infty$. 
 
 The definition used in JD+ is quasi-identical to that of Durbin and Koopman[1].
 
@@ -44,9 +43,9 @@ $$ \mathbf{a_{0}}[=0], \mathbf{P_*} [=0], \mathbf{B} [=0], \mathbf{P_\infty} [=B
  
 ---
 
-### Implementation details
+## Implementation details
 
-#### Functional forms
+### Functional forms
 
 State space forms and the related algorithms focus on the state vectors and their (conditional) distribution, and on the relationships between those vectors at different time points. For instance, using obvious notations, we will consider:
 
@@ -90,33 +89,33 @@ As soon as direct matrix computations are avoided, the matrices of the system th
 
 Each model is defined by three components:
 
-- Initialization (defined in **jdplus.ssf.ISsfInitialization**)
-- Dynamics (defined in **jdplus.ssf.ISsfDynamics**)
-- Measurement(s) (defined in **jdplus.ssf.univariate.ISsfMeasurement** and in **jdplus.ssf.multivariate.ISsfMeasurements**)
+- Initialization (defined in `jdplus.ssf.ISsfInitialization`)
+- Dynamics (defined in `jdplus.ssf.ISsfDynamics`)
+- Measurement(s) (defined in `jdplus.ssf.univariate.ISsfMeasurement` and in `jdplus.ssf.multivariate.ISsfMeasurements`)
 
-The first two components are independent of the structure of the observations and constitute what is called in JD+ a "state component" (**jdplus.ssf.StateComponent**)
+The first two components are independent of the structure of the observations and constitute what is called in JD+ a "state component" (`jdplus.ssf.StateComponent`)
 
-Generic models are defined in the class **jdplus.ssf.univariate.Ssf**, which is the default implementation of the interface **jdplus.ssf.univariate.ISsf** or **jdplus.ssf.multivariate.Ssf**, which is the default implementation of the interface **jdplus.ssf.multivariate.IMultivariateSsf**. 
+Generic models are defined in the class `jdplus.ssf.univariate.Ssf`, which is the default implementation of the interface `jdplus.ssf.univariate.ISsf` or `jdplus.ssf.multivariate.Ssf`, which is the default implementation of the interface `jdplus.ssf.multivariate.IMultivariateSsf`. 
 To be noted that the modelled series is not attached to the definition of the state space form.
 
 JD+ provides numerous atomic models/building blocks that can be combined to define more complex models. We list below the most important ones. See the corresponding documents for more information
 
 - State components
-    - ARMA, ARIMA (**jdplus.ssf.arima.SsfArima**), UCARIMA (**jdplus.ssf.arima.SsfUcarima**)
+    - ARMA, ARIMA (`jdplus.ssf.arima.SsfArima`), UCARIMA (`jdplus.ssf.arima.SsfUcarima`)
     - Structural time series
-        - Local level:  **jdplus.ssf.sts.LocalLevel**
-        - Local linear trend: **jdplus.ssf.sts.LocalLinearTrend**
-        - Seasonal component: **jdplus.ssf.sts.SeasonalComponent**
-        - Noise: **jdplus.ssf.sts.Noise**
-        - Cyclical component: **jdplus.ssf.sts.CyclicalComponent**
-        - Periodic harmonics: **jdplus.ssf.sts.PeriodicComponent**
+        - Local level:  `jdplus.ssf.sts.LocalLevel`
+        - Local linear trend: `jdplus.ssf.sts.LocalLinearTrend`
+        - Seasonal component: `jdplus.ssf.sts.SeasonalComponent`
+        - Noise: `jdplus.ssf.sts.Noise`
+        - Cyclical component: `jdplus.ssf.sts.CyclicalComponent`
+        - Periodic harmonics: `jdplus.ssf.sts.PeriodicComponent`
 
-    - Time varying coefficients, modelled by (multi-variate) random walks (**jdplus.ssf.basic.Coefficients** )
+    - Time varying coefficients, modelled by (multi-variate) random walks (`jdplus.ssf.basic.Coefficients` )
 
 
-#### Algorithms
+## Algorithms
 
-##### Generalities
+### Generalities
 
 The two basic algorithms related to state space models are filtering (computation of $a_{t|t-1}$) and (fixed interval) smoothing (computation of $a_{t|T}$).
 
@@ -126,19 +125,23 @@ Those algorithms will often make use of slightly different representations of th
 
 Beside the algorithms themselves and their related state representations, the framework offers several output storages to improve the general performances of the processing.  
 
-##### Ordinary filters
+### Ordinary filters
 
-##### Handling of diffuse models
+### Handling of diffuse models
 
-##### CKMS filters
+### CKMS filters
 
-##### Array filters
+### Array filters
 
-##### Others
+### Others
 
-##### State representations
+### State representations
 
-##### Output
+### Output
+
+####  Prediction error decomposition
+
+Accumulation of quantities implied in the evaluation of the likelihood.
      
 ---
 
@@ -153,3 +156,5 @@ Beside the algorithms themselves and their related state representations, the fr
 [4] _GOMEZ, V. AND A. MARAVALL_ (1994): "Estimation, Prediction, and Interpolation for Nonstationary Series with the Kalman Filter", Journal of the American Statistical Association, 89(426), 611-624.
 
 [5] _HARVEY, A.C._ (1989): "Forecasting, Structural Time Series Models and the Kalman Filter", Cambridge University Press.
+
+[6] _KOHN, R. AND ANSLEY, C.F._ (1985): "Efficient estimation and prediction in time series regression models", Biometrika, 72, 3, 694-697.
